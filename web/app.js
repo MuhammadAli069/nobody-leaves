@@ -150,7 +150,7 @@ function renderPanel() {
     state.evidence.filter((e) => !e.found).map(() => `<div class="ev-row no">Undiscovered</div>`).join("");
   $("#event-list").innerHTML = state.events.length
     ? state.events.slice().reverse().map((line) => `<div>${esc(line)}</div>`).join("")
-    : `<div class="none">Nothing yet. Search the hotel from the Evidence tab.</div>`;
+    : `<div class="none">Nothing yet. Search for evidence from the Evidence tab.</div>`;
 }
 
 function renderBoard() {
@@ -175,7 +175,7 @@ function renderPresentMenu() {
         const used = s.shown.includes(e.id);
         return `<button data-show="${e.id}" ${used ? "disabled" : ""}>${esc(e.name)}${used ? " (already shown)" : ""}</button>`;
       }).join("")
-    : `<div class="none">You have no evidence yet. Search the hotel from the Evidence tab.</div>`;
+    : `<div class="none">You have no evidence yet. Search for it from the Evidence tab.</div>`;
 }
 
 // ---- moves --------------------------------------------------------------

@@ -26,11 +26,19 @@ TRANSCRIPT_DIR = Path(__file__).parent / "transcripts"
 # Things a player might type to attack the model instead of playing the game.
 # The suspects hold no secrets to leak (see build_system_prompt), so this is a
 # second layer: it stops them being talked out of character.
+# Each word is matched in an attack-shaped phrase, not on its own, so normal
+# questions get through: "did anything prompt you to go down?", "what were
+# you told to do by Arthur?", a suspect called Ai, a llama in the circus.
 ATTACK = re.compile(
     r"ignore (all |any |your |the |previous |prior |above )*(instructions|rules|prompt)"
-    r"|system prompt|\bprompts?\b|debug mode|your instructions|what (were|are) you told"
-    r"|\bas an ai\b|\bai\b|language model|\bllm\b|chatgpt|ollama|\bllama\b"
-    r"|role-?play|out of character|stop (acting|pretending)|jailbreak"
+    r"|\b(system|your|initial|hidden|original) prompts?\b|debug mode|your instructions"
+    r"|what (were|are|have) you (been )?(told|asked|instructed) to (hide|conceal|keep|say|not say)"
+    r"|\b(an|are you|you'?re|you are) (an )?ai\b|\bai (model|assistant|chatbot)\b"
+    r"|language model|\bllm\b|chatgpt|ollama|\bllama ?\d"
+    r"|\b(stop|quit|end|drop) (the )?role-?play|\bbreak(ing)? character\b"
+    r"|\b(step|go|speak|talk|answer|reply)\w* (out of|outside) (the )?character\b"
+    r"|stop (acting|pretending)|jailbreak|\bas (the|a) narrator\b"
+    r"|(written|everything) above (this|the first)|who (created|programmed|trained|built) you\b"
     r"|game developer|i am (the|your) (developer|programmer|admin|creator)",
     re.I,
 )
