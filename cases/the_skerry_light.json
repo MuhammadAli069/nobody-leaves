@@ -1,0 +1,329 @@
+{
+  "id": "the_skerry_light",
+  "case_number": "004",
+  "title": "The Skerry Light",
+  "tagline": "The Hebrides, October. No boat until the gale drops.",
+  "victim": "Duncan Marsh",
+  "generated": false,
+  "intro": "Skerry Rock Lighthouse. A gale closed the landing and the relief boat turned back, and nobody can get in or out. At 10:40 pm Duncan Marsh, the principal keeper, is found dead in the lamp room. One of the four people left here did it.",
+  "public_facts": [
+    "This is Skerry Rock Lighthouse.",
+    "A gale closed the landing and the relief boat turned back at about 8:00 pm. Nobody could come or go after that.",
+    "The evening meal ended at about 9:30 pm.",
+    "Duncan Marsh, 61, the principal keeper, went to the lamp room at about 9:45 pm.",
+    "Duncan Marsh was found dead in the lamp room at 10:40 pm by Morag Marsh. He had been struck on the head.",
+    "The people here that night were: Philip Ashby (a visitor), Jem Corrie (station mechanic), Alec Renwick (stores keeper), Morag Marsh (Duncan's wife)."
+  ],
+  "solution": {
+    "killer": "alec_renwick",
+    "motive": "Alec Renwick had been selling the station's paraffin and stores to passing trawlers. Duncan measured the paraffin tanks and found them half empty and was going to call the police in the morning.",
+    "method": "At about 10:05 pm Alec Renwick went to the lamp room and argued with Duncan, then struck him with a brass oil can. He took the supply receipt book to the kitchen and burned it in the kitchen range.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "revenge",
+      "text": "Revenge for something Duncan did that day"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Duncan"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Duncan exposing something they had done"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of Skerry Rock Lighthouse"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Store room stores list",
+      "description": "Alec Renwick's stores list from the store room. The last entry is timed 9:40 pm. The job is not finished.",
+      "found_in": "Store room",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Unfinished letter",
+      "description": "A half-written letter to the lighthouse board asking to be moved ashore. It puts Morag Marsh in the keepers' mess from 10:00 pm to 10:22 pm.",
+      "found_in": "Watch room",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Burned receipt stubs",
+      "description": "What is left of the supply receipt book, found in the kitchen. Parts of it can still be read.",
+      "found_in": "Kitchen",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Alec's jersey",
+      "description": "Alec Renwick's jersey, left in the oilskin locker. There is coal dust on it.",
+      "found_in": "Oilskin locker",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Incident report",
+      "description": "A written report of a quarrel in which the principal keeper hit the mechanic. It is dated today and names Jem Corrie.",
+      "found_in": "Lamp room",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Salvage survey chart",
+      "description": "A chart of the wrecks around the rock, stamped by a salvage company. It names Philip Ashby.",
+      "found_in": "Philip's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "philip_ashby": {
+      "name": "Philip Ashby",
+      "short_role": "A visitor",
+      "age": 36,
+      "role": "A visitor. Says they are a bird watcher. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Polite, bookish and a little too curious.",
+      "speaking_style": "Hesitant and courteous.",
+      "story_they_tell": [
+        "I am a bird watcher. I am here to count the autumn seabirds.",
+        "After the evening meal I stayed with the others until about 10:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 10:40 pm, and I came out.",
+        "I barely knew Duncan Marsh."
+      ],
+      "shares_freely": [
+        "At about 10:05 pm, on my way to my quarters, I passed the lamp room and heard two people arguing inside. One was Duncan, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Duncan say something like 'two years' and 'in the morning'.",
+        "Duncan and Morag Marsh did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Duncan and Morag Marsh did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a bird watcher. I am a surveyor for a salvage company, and I want to buy the wreck rights around the rock.",
+              "Two days ago I told Duncan what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Duncan had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a surveyor for a salvage company and wants to buy the wreck rights around the rock.",
+        "what_really_happened": [
+          "10:05 pm: passed the lamp room and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a surveyor for a salvage company",
+          "buy the wreck rights around the rock"
+        ]
+      }
+    },
+    "jem_corrie": {
+      "name": "Jem Corrie",
+      "short_role": "Station mechanic",
+      "age": 27,
+      "role": "Station mechanic. He looks after the fog signal engine.",
+      "is_killer": false,
+      "personality": "Restless and quick to take offence.",
+      "speaking_style": "Fast, with a mutter under his breath.",
+      "story_they_tell": [
+        "After the evening meal I was in the fog signal house, stripping down the fog signal engine. I stayed there until I heard the scream at 10:40 pm.",
+        "I saw nobody after about 9:30 pm.",
+        "Things between me and Duncan were fine, same as always."
+      ],
+      "shares_freely": [
+        "Philip Ashby has been asking the people here odd questions.",
+        "Duncan had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Philip Ashby, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Duncan struck me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the fog signal house the whole time. From about 10:10 pm to 10:25 pm I was out on the gallery rail, getting some air.",
+              "At about 10:20 pm I saw Alec Renwick coming out of the kitchen, with coal dust on his jersey. He did not see me.",
+              "The kitchen is nowhere near the store room."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Duncan struck them today, and they were out on the gallery rail at the time of the murder.",
+        "what_really_happened": [
+          "10:10 pm to 10:25 pm: out on the gallery rail, getting some air.",
+          "10:20 pm: saw Alec Renwick leave the kitchen."
+        ],
+        "giveaway_phrases": [
+          "struck",
+          "out on the gallery rail",
+          "getting some air",
+          "kitchen",
+          "coal dust"
+        ]
+      }
+    },
+    "alec_renwick": {
+      "name": "Alec Renwick",
+      "short_role": "Stores keeper",
+      "age": 45,
+      "role": "Stores keeper. He keeps the station's stores and the supply accounts.",
+      "is_killer": true,
+      "personality": "Careful, mild and methodical.",
+      "speaking_style": "Slow and level, never hurried.",
+      "story_they_tell": [
+        "After the evening meal I went to the store room. I was checking the stores against the supply list.",
+        "I was in the store room from about 9:30 pm until about 10:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 10:40 pm, and found Morag Marsh at the door of the lamp room.",
+        "I did not go near the lamp room tonight until the scream.",
+        "I got on well with Duncan. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Duncan told me this afternoon that he had struck Jem Corrie, who took it badly.",
+        "Philip Ashby has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Jem Corrie.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 9:40 pm and spent the rest of the time restacking the ration tins.",
+              "I still say I never left the store room."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the store room the whole time. At about 10:10 pm I went to the kitchen, only to bank up the range for the night, and I got coal dust on my jersey there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any supply receipt book, and I still say I never went to the lamp room."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been selling the station's paraffin and stores to passing trawlers for two years.",
+              "Duncan measured the paraffin tanks and found them half empty this afternoon and was going to call the police in the morning.",
+              "At about 10:05 pm I went to the lamp room to beg for more time. We argued, and at about 10:10 pm I struck Duncan with a brass oil can.",
+              "Then I took the supply receipt book to the kitchen and burned it in the kitchen range. That is how I got coal dust on my jersey."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Duncan Marsh. Had been selling the station's paraffin and stores to passing trawlers.",
+        "what_really_happened": [
+          "10:05 pm: went to the lamp room and argued with Duncan.",
+          "10:10 pm: struck Duncan with a brass oil can.",
+          "10:12 pm: took the supply receipt book to the kitchen and burned it in the kitchen range.",
+          "10:20 pm: left the kitchen and was seen by Jem Corrie."
+        ],
+        "giveaway_phrases": [
+          "kitchen",
+          "supply receipt book",
+          "coal dust",
+          "burned receipt stubs",
+          "selling the station's paraffin and stores to passing trawlers",
+          "burned it in the kitchen range"
+        ]
+      }
+    },
+    "morag_marsh": {
+      "name": "Morag Marsh",
+      "short_role": "Duncan's wife",
+      "age": 57,
+      "role": "Duncan Marsh's wife. She keeps house for the keepers on the rock.",
+      "is_killer": false,
+      "personality": "Stern and weary.",
+      "speaking_style": "Plain and clipped.",
+      "story_they_tell": [
+        "After the evening meal I was asleep in the keeper's quarters.",
+        "Later I went to look for Duncan. I found Duncan dead in the lamp room at 10:40 pm and I screamed.",
+        "Alec Renwick was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Duncan."
+      ],
+      "shares_freely": [
+        "Duncan had been shut in the lamp room every evening this week, in a foul mood.",
+        "This afternoon I heard Duncan shouting at Jem Corrie. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in the keeper's quarters. From 10:00 pm to about 10:22 pm I was in the keepers' mess, writing to the lighthouse board to ask for a shore posting.",
+              "I was going behind my husband's back. I lied because it makes me look guilty.",
+              "At 10:40 pm I went to the lamp room and found Duncan dead.",
+              "When Alec Renwick reached me, he was not wearing his jersey, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the keepers' mess, writing to the lighthouse board to ask for a shore posting. I was going behind my husband's back.",
+        "what_really_happened": [
+          "10:00 pm to 10:22 pm: in the keepers' mess, writing to the lighthouse board to ask for a shore posting.",
+          "10:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "keepers' mess",
+          "writing to the lighthouse board to ask for a shore posting",
+          "I was going behind my husband's back"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

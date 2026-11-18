@@ -1,0 +1,329 @@
+{
+  "id": "the_final_curtain",
+  "case_number": "005",
+  "title": "The Final Curtain",
+  "tagline": "London, December. Doors locked, lights out.",
+  "victim": "Helena Grant",
+  "generated": false,
+  "intro": "The Alhambra Theatre. A power failure jammed the electric doors and killed the telephones, and nobody can get in or out. At 11:40 pm Helena Grant, the owner and manager of the theatre, is found dead in the manager's office. One of the four people left here did it.",
+  "public_facts": [
+    "This is The Alhambra Theatre.",
+    "A power failure jammed the electric doors and killed the telephones at about 9:00 pm. Nobody could come or go after that.",
+    "The dress rehearsal ended at about 10:30 pm.",
+    "Helena Grant, 59, the owner and manager of the theatre, went to the manager's office at about 10:45 pm.",
+    "Helena Grant was found dead in the manager's office at 11:40 pm by Roland Grant. She had been struck on the head.",
+    "The people here that night were: Simon Kemp (box office manager), Dora Flint (stage carpenter), Iris Bellamy (a visitor), Roland Grant (Helena's husband)."
+  ],
+  "solution": {
+    "killer": "simon_kemp",
+    "motive": "Simon Kemp had been selling the best seats twice and keeping the second payment. Helena found two tickets sold for the same seat and was going to call the police in the morning.",
+    "method": "At about 11:05 pm Simon Kemp went to the manager's office and argued with Helena, then struck her with a bronze award statuette. He took the duplicate ticket book to the boiler room and pushed it into the boiler firebox.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "private",
+      "text": "A private quarrel with Helena"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of The Alhambra Theatre"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Helena did that day"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Helena exposing something they had done"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Box office booking sheet",
+      "description": "Simon Kemp's booking sheet from the box office. The last entry is timed 10:40 pm. The job is not finished.",
+      "found_in": "Box office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Green room booking",
+      "description": "A booking slip reserving the green room for a private rehearsal for two. It puts Roland Grant in the green room from 11:00 pm to 11:22 pm.",
+      "found_in": "Stage door office",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Scorched ticket stubs",
+      "description": "What is left of the duplicate ticket book, found in the boiler room. Parts of it can still be read.",
+      "found_in": "Boiler room",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Simon's dinner jacket",
+      "description": "Simon Kemp's dinner jacket, left in the wardrobe room. There is boiler grime on it.",
+      "found_in": "Wardrobe room",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Dismissal note",
+      "description": "A note ending the stage carpenter's contract at the end of the week. It is dated today and names Dora Flint.",
+      "found_in": "Manager's office",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Cinema chain proposal",
+      "description": "A proposal from a cinema chain to buy the theatre and convert it. It names Iris Bellamy.",
+      "found_in": "Iris's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "simon_kemp": {
+      "name": "Simon Kemp",
+      "short_role": "Box office manager",
+      "age": 47,
+      "role": "Box office manager. He runs the box office and banks the takings.",
+      "is_killer": true,
+      "personality": "Charming, smooth and a little too helpful.",
+      "speaking_style": "Warm and quick, full of compliments.",
+      "story_they_tell": [
+        "After the dress rehearsal I went to the box office. I was cashing up the advance bookings.",
+        "I was in the box office from about 10:30 pm until about 11:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:40 pm, and found Roland Grant at the door of the manager's office.",
+        "I did not go near the manager's office tonight until the scream.",
+        "I got on well with Helena. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Helena told me this afternoon that she had sacked Dora Flint, who took it badly.",
+        "Iris Bellamy has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Dora Flint.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:40 pm and spent the rest of the time rolling coins for the bank.",
+              "I still say I never left the box office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the box office the whole time. At about 11:10 pm I went to the boiler room, only to see why the radiators had gone cold, and I got boiler grime on my dinner jacket there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any duplicate ticket book, and I still say I never went to the manager's office."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been selling the best seats twice and keeping the second payment for two years.",
+              "Helena found two tickets sold for the same seat this afternoon and was going to call the police in the morning.",
+              "At about 11:05 pm I went to the manager's office to beg for more time. We argued, and at about 11:10 pm I struck Helena with a bronze award statuette.",
+              "Then I took the duplicate ticket book to the boiler room and pushed it into the boiler firebox. That is how I got boiler grime on my dinner jacket."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Helena Grant. Had been selling the best seats twice and keeping the second payment.",
+        "what_really_happened": [
+          "11:05 pm: went to the manager's office and argued with Helena.",
+          "11:10 pm: struck Helena with a bronze award statuette.",
+          "11:12 pm: took the duplicate ticket book to the boiler room and pushed it into the boiler firebox.",
+          "11:20 pm: left the boiler room and was seen by Dora Flint."
+        ],
+        "giveaway_phrases": [
+          "boiler room",
+          "duplicate ticket book",
+          "boiler grime",
+          "scorched ticket stubs",
+          "selling the best seats twice and keeping the second payment",
+          "pushed it into the boiler firebox"
+        ]
+      }
+    },
+    "dora_flint": {
+      "name": "Dora Flint",
+      "short_role": "Stage carpenter",
+      "age": 39,
+      "role": "Stage carpenter. She builds and repairs the scenery.",
+      "is_killer": false,
+      "personality": "Dry, stubborn and proud of her work.",
+      "speaking_style": "Blunt, with a workshop growl.",
+      "story_they_tell": [
+        "After the dress rehearsal I was in the scenery workshop, repairing a broken piece of scenery. I stayed there until I heard the scream at 11:40 pm.",
+        "I saw nobody after about 10:30 pm.",
+        "Things between me and Helena were fine, same as always."
+      ],
+      "shares_freely": [
+        "Iris Bellamy has been asking the people here odd questions.",
+        "Helena had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Iris Bellamy, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Helena sacked me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the scenery workshop the whole time. From about 11:10 pm to 11:25 pm I was out on the fire escape, having a cigarette.",
+              "At about 11:20 pm I saw Simon Kemp coming out of the boiler room, with boiler grime on his dinner jacket. He did not see me.",
+              "The boiler room is nowhere near the box office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Helena sacked them today, and they were out on the fire escape at the time of the murder.",
+        "what_really_happened": [
+          "11:10 pm to 11:25 pm: out on the fire escape, having a cigarette.",
+          "11:20 pm: saw Simon Kemp leave the boiler room."
+        ],
+        "giveaway_phrases": [
+          "sacked",
+          "out on the fire escape",
+          "having a cigarette",
+          "boiler room",
+          "boiler grime"
+        ]
+      }
+    },
+    "iris_bellamy": {
+      "name": "Iris Bellamy",
+      "short_role": "A visitor",
+      "age": 33,
+      "role": "A visitor. Says they are a drama student. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Bright, eager and observant.",
+      "speaking_style": "Quick and earnest.",
+      "story_they_tell": [
+        "I am a drama student. I am here to watch the rehearsals for my studies.",
+        "After the dress rehearsal I stayed with the others until about 11:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:40 pm, and I came out.",
+        "I barely knew Helena Grant."
+      ],
+      "shares_freely": [
+        "At about 11:05 pm, on my way to my quarters, I passed the manager's office and heard two people arguing inside. One was Helena, and she was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Helena say something like 'two years' and 'in the morning'.",
+        "Helena and Roland Grant did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Helena and Roland Grant did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a drama student. I am a buyer for a cinema chain, and I want to turn the theatre into a cinema.",
+              "Two days ago I told Helena what I wanted, and she refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Helena had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a buyer for a cinema chain and wants to turn the theatre into a cinema.",
+        "what_really_happened": [
+          "11:05 pm: passed the manager's office and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a buyer for a cinema chain",
+          "turn the theatre into a cinema"
+        ]
+      }
+    },
+    "roland_grant": {
+      "name": "Roland Grant",
+      "short_role": "Helena's husband",
+      "age": 62,
+      "role": "Helena Grant's husband. He directs most of the theatre's productions.",
+      "is_killer": false,
+      "personality": "Grand, wounded and theatrical.",
+      "speaking_style": "Booming, with long pauses.",
+      "story_they_tell": [
+        "After the dress rehearsal I was asleep on the sofa in my dressing room.",
+        "Later I went to look for Helena. I found Helena dead in the manager's office at 11:40 pm and I screamed.",
+        "Simon Kemp was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Helena."
+      ],
+      "shares_freely": [
+        "Helena had been shut in the manager's office every evening this week, in a foul mood.",
+        "This afternoon I heard Helena shouting at Dora Flint. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep on the sofa in my dressing room. From 11:00 pm to about 11:22 pm I was in the green room, rehearsing a love scene in private with a young actress.",
+              "I did not want my wife to know about her. I lied because it makes me look guilty.",
+              "At 11:40 pm I went to the manager's office and found Helena dead.",
+              "When Simon Kemp reached me, he was not wearing his dinner jacket, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the green room, rehearsing a love scene in private with a young actress. I did not want my wife to know about her.",
+        "what_really_happened": [
+          "11:00 pm to 11:22 pm: in the green room, rehearsing a love scene in private with a young actress.",
+          "11:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "green room",
+          "rehearsing a love scene in private with a young actress",
+          "I did not want my wife to know about her"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

@@ -1,0 +1,329 @@
+{
+  "id": "the_angels_share",
+  "case_number": "009",
+  "title": "The Angel's Share",
+  "tagline": "The Western Isles, November. The ferry is not coming.",
+  "victim": "Fergus Baird",
+  "generated": false,
+  "intro": "Kildonan Island Distillery. A storm stopped the ferry and brought down the telephone line, and nobody can get in or out. At 11:10 pm Fergus Baird, the owner of the distillery, is found dead in the still house. One of the four people left here did it.",
+  "public_facts": [
+    "This is Kildonan Island Distillery.",
+    "A storm stopped the ferry and brought down the telephone line at about 8:30 pm. Nobody could come or go after that.",
+    "The tasting supper ended at about 10:00 pm.",
+    "Fergus Baird, 64, the owner of the distillery, went to the still house at about 10:15 pm.",
+    "Fergus Baird was found dead in the still house at 11:10 pm by Rhona Baird. He had been struck on the head.",
+    "The people here that night were: Edward Lyle (a visitor), Moira Sellar (excise clerk), Callum Doyle (cooper), Rhona Baird (Fergus's wife)."
+  ],
+  "solution": {
+    "killer": "moira_sellar",
+    "motive": "Moira Sellar had been filling casks that never went into the bond book and selling them privately. Fergus counted the casks in the warehouse and found forty too few and was going to call the police in the morning.",
+    "method": "At about 10:35 pm Moira Sellar went to the still house and argued with Fergus, then struck him with a copper sampling ladle. She took the private sales notebook to the kiln and threw it on the kiln fire.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "gain",
+      "text": "To get control of Kildonan Island Distillery"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Fergus exposing something they had done"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Fergus"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Fergus did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Bond office bond return",
+      "description": "Moira Sellar's bond return from the bond office. The last entry is timed 10:10 pm. The job is not finished.",
+      "found_in": "Bond office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Tasting room stock card",
+      "description": "A stock card showing twelve bottles of the oldest whisky drawn off that evening. It puts Rhona Baird in the tasting room from 10:30 pm to 10:52 pm.",
+      "found_in": "Shop",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Smouldering notebook",
+      "description": "What is left of the private sales notebook, found in the kiln. Parts of it can still be read.",
+      "found_in": "Kiln",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Moira's raincoat",
+      "description": "Moira Sellar's raincoat, left in the changing room. There is peat ash on it.",
+      "found_in": "Changing room",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Wage slip",
+      "description": "A wage slip with half the cooper's pay crossed out in red ink. It is dated today and names Callum Doyle.",
+      "found_in": "Still house",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Spirits company offer",
+      "description": "An offer from a large spirits company to buy the distillery outright. It names Edward Lyle.",
+      "found_in": "Edward's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "edward_lyle": {
+      "name": "Edward Lyle",
+      "short_role": "A visitor",
+      "age": 44,
+      "role": "A visitor. Says they are a whisky writer. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Genial, knowledgeable and hard to read.",
+      "speaking_style": "Relaxed, with a storyteller's pace.",
+      "story_they_tell": [
+        "I am a whisky writer. I am here to write a chapter about island distilleries.",
+        "After the tasting supper I stayed with the others until about 10:35 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:10 pm, and I came out.",
+        "I barely knew Fergus Baird."
+      ],
+      "shares_freely": [
+        "At about 10:35 pm, on my way to my quarters, I passed the still house and heard two people arguing inside. One was Fergus, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Fergus say something like 'two years' and 'in the morning'.",
+        "Fergus and Rhona Baird did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Fergus and Rhona Baird did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a whisky writer. I am a buyer for a big spirits company, and I want to buy the distillery and close it.",
+              "Two days ago I told Fergus what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Fergus had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a buyer for a big spirits company and wants to buy the distillery and close it.",
+        "what_really_happened": [
+          "10:35 pm: passed the still house and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a buyer for a big spirits company",
+          "buy the distillery and close it"
+        ]
+      }
+    },
+    "moira_sellar": {
+      "name": "Moira Sellar",
+      "short_role": "Excise clerk",
+      "age": 43,
+      "role": "Excise clerk. She keeps the bond records and pays the duty.",
+      "is_killer": true,
+      "personality": "Friendly, sharp and never flustered.",
+      "speaking_style": "Bright and brisk.",
+      "story_they_tell": [
+        "After the tasting supper I went to the bond office. I was balancing the bond book.",
+        "I was in the bond office from about 10:00 pm until about 11:00 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:10 pm, and found Rhona Baird at the door of the still house.",
+        "I did not go near the still house tonight until the scream.",
+        "I got on well with Fergus. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Fergus told me this afternoon that he had underpaid Callum Doyle, who took it badly.",
+        "Edward Lyle has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Callum Doyle.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:10 pm and spent the rest of the time writing out duty labels.",
+              "I still say I never left the bond office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the bond office the whole time. At about 10:40 pm I went to the kiln, only to check that the kiln was damped down, and I got peat ash on my raincoat there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any private sales notebook, and I still say I never went to the still house."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been filling casks that never went into the bond book and selling them privately for two years.",
+              "Fergus counted the casks in the warehouse and found forty too few this afternoon and was going to call the police in the morning.",
+              "At about 10:35 pm I went to the still house to beg for more time. We argued, and at about 10:40 pm I struck Fergus with a copper sampling ladle.",
+              "Then I took the private sales notebook to the kiln and threw it on the kiln fire. That is how I got peat ash on my raincoat."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Fergus Baird. Had been filling casks that never went into the bond book and selling them privately.",
+        "what_really_happened": [
+          "10:35 pm: went to the still house and argued with Fergus.",
+          "10:40 pm: struck Fergus with a copper sampling ladle.",
+          "10:42 pm: took the private sales notebook to the kiln and threw it on the kiln fire.",
+          "10:50 pm: left the kiln and was seen by Callum Doyle."
+        ],
+        "giveaway_phrases": [
+          "kiln",
+          "private sales notebook",
+          "peat ash",
+          "smouldering notebook",
+          "filling casks that never went into the bond book and selling them privately",
+          "threw it on the kiln fire"
+        ]
+      }
+    },
+    "callum_doyle": {
+      "name": "Callum Doyle",
+      "short_role": "Cooper",
+      "age": 38,
+      "role": "Cooper. He makes and mends the casks.",
+      "is_killer": false,
+      "personality": "Stubborn, skilled and short-tempered.",
+      "speaking_style": "Gruff, with long silences.",
+      "story_they_tell": [
+        "After the tasting supper I was in the cooperage, hooping a new cask. I stayed there until I heard the scream at 11:10 pm.",
+        "I saw nobody after about 10:00 pm.",
+        "Things between me and Fergus were fine, same as always."
+      ],
+      "shares_freely": [
+        "Edward Lyle has been asking the people here odd questions.",
+        "Fergus had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Edward Lyle, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Fergus underpaid me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the cooperage the whole time. From about 10:40 pm to 10:55 pm I was down on the pier, checking the moorings of my boat.",
+              "At about 10:50 pm I saw Moira Sellar coming out of the kiln, with peat ash on her raincoat. She did not see me.",
+              "The kiln is nowhere near the bond office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Fergus underpaid them today, and they were down on the pier at the time of the murder.",
+        "what_really_happened": [
+          "10:40 pm to 10:55 pm: down on the pier, checking the moorings of my boat.",
+          "10:50 pm: saw Moira Sellar leave the kiln."
+        ],
+        "giveaway_phrases": [
+          "underpaid",
+          "down on the pier",
+          "checking the moorings of my boat",
+          "kiln",
+          "peat ash"
+        ]
+      }
+    },
+    "rhona_baird": {
+      "name": "Rhona Baird",
+      "short_role": "Fergus's wife",
+      "age": 59,
+      "role": "Fergus Baird's wife. She runs the visitors' shop and the tasting room.",
+      "is_killer": false,
+      "personality": "Warm on the surface and watchful underneath.",
+      "speaking_style": "Soft and coaxing.",
+      "story_they_tell": [
+        "After the tasting supper I was upstairs in bed with a headache.",
+        "Later I went to look for Fergus. I found Fergus dead in the still house at 11:10 pm and I screamed.",
+        "Moira Sellar was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Fergus."
+      ],
+      "shares_freely": [
+        "Fergus had been shut in the still house every evening this week, in a foul mood.",
+        "This afternoon I heard Fergus shouting at Callum Doyle. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not upstairs in bed with a headache. From 10:30 pm to about 10:52 pm I was in the tasting room, drawing off bottles of the oldest whisky for myself.",
+              "I meant to sell them without my husband knowing. I lied because it makes me look guilty.",
+              "At 11:10 pm I went to the still house and found Fergus dead.",
+              "When Moira Sellar reached me, she was not wearing her raincoat, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the tasting room, drawing off bottles of the oldest whisky for myself. I meant to sell them without my husband knowing.",
+        "what_really_happened": [
+          "10:30 pm to 10:52 pm: in the tasting room, drawing off bottles of the oldest whisky for myself.",
+          "11:10 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "tasting room",
+          "drawing off bottles of the oldest whisky for myself",
+          "I meant to sell them without my husband knowing"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

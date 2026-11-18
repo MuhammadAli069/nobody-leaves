@@ -1,0 +1,329 @@
+{
+  "id": "the_night_gallery",
+  "case_number": "011",
+  "title": "The Night Gallery",
+  "tagline": "Bath, a winter night. The alarm has sealed every door.",
+  "victim": "Beatrice Ashcombe",
+  "generated": false,
+  "intro": "The Ashcombe Museum. A false alarm dropped the security shutters and locked the building, and nobody can get in or out. At 11:10 pm Beatrice Ashcombe, the director of the museum, is found dead in the sculpture hall. One of the four people left here did it.",
+  "public_facts": [
+    "This is The Ashcombe Museum.",
+    "A false alarm dropped the security shutters and locked the building at about 8:30 pm. Nobody could come or go after that.",
+    "The patrons' reception ended at about 10:00 pm.",
+    "Beatrice Ashcombe, 66, the director of the museum, went to the sculpture hall at about 10:15 pm.",
+    "Beatrice Ashcombe was found dead in the sculpture hall at 11:10 pm by Cecily Ashcombe. She had been struck on the head.",
+    "The people here that night were: Cecily Ashcombe (Beatrice's sister), Laurence Vane (museum registrar), Joe Lambert (art handler), Rupert Sloane (a visitor)."
+  ],
+  "solution": {
+    "killer": "laurence_vane",
+    "motive": "Laurence Vane had been swapping small pieces from the stores for copies and selling the originals. Beatrice compared a coin in the stores with its old photograph and was going to call the police in the morning.",
+    "method": "At about 10:35 pm Laurence Vane went to the sculpture hall and argued with Beatrice, then struck her with a small bronze bust. He took the folder of dealers' receipts to the conservation studio and dissolved it in the solvent bath.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "cover_up",
+      "text": "To stop Beatrice exposing something they had done"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of The Ashcombe Museum"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Beatrice"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Beatrice did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Registry accession list",
+      "description": "Laurence Vane's accession list from the registry. The last entry is timed 10:10 pm. The job is not finished.",
+      "found_in": "Registry",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Visitor pass stub",
+      "description": "A late visitor pass issued to a pawnbroker for the members' room. It puts Cecily Ashcombe in the members' room from 10:30 pm to 10:52 pm.",
+      "found_in": "Security desk",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Half-dissolved receipts",
+      "description": "What is left of the folder of dealers' receipts, found in the conservation studio. Parts of it can still be read.",
+      "found_in": "Conservation studio",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Laurence's blazer",
+      "description": "Laurence Vane's blazer, left in the staff cloakroom. There is cleaning solvent on it.",
+      "found_in": "Staff cloakroom",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Written reprimand",
+      "description": "A formal reprimand to the art handler for a scratched frame. It is dated today and names Joe Lambert.",
+      "found_in": "Sculpture hall",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Collector's shopping list",
+      "description": "A typed list from a private collector naming museum pieces and prices. It names Rupert Sloane.",
+      "found_in": "Rupert's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "cecily_ashcombe": {
+      "name": "Cecily Ashcombe",
+      "short_role": "Beatrice's sister",
+      "age": 61,
+      "role": "Beatrice Ashcombe's sister. She chairs the museum's friends and raises its money.",
+      "is_killer": false,
+      "personality": "Gracious, anxious and secretive.",
+      "speaking_style": "Breathless and polite.",
+      "story_they_tell": [
+        "After the patrons' reception I was resting in the flat upstairs.",
+        "Later I went to look for Beatrice. I found Beatrice dead in the sculpture hall at 11:10 pm and I screamed.",
+        "Laurence Vane was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Beatrice."
+      ],
+      "shares_freely": [
+        "Beatrice had been shut in the sculpture hall every evening this week, in a foul mood.",
+        "This afternoon I heard Beatrice shouting at Joe Lambert. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not resting in the flat upstairs. From 10:30 pm to about 10:52 pm I was in the members' room, showing my jewellery to a pawnbroker.",
+              "I had lost the friends' fund at the card tables. I lied because it makes me look guilty.",
+              "At 11:10 pm I went to the sculpture hall and found Beatrice dead.",
+              "When Laurence Vane reached me, he was not wearing his blazer, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the members' room, showing my jewellery to a pawnbroker. I had lost the friends' fund at the card tables.",
+        "what_really_happened": [
+          "10:30 pm to 10:52 pm: in the members' room, showing my jewellery to a pawnbroker.",
+          "11:10 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "members' room",
+          "showing my jewellery to a pawnbroker",
+          "I had lost the friends' fund at the card tables"
+        ]
+      }
+    },
+    "laurence_vane": {
+      "name": "Laurence Vane",
+      "short_role": "Museum registrar",
+      "age": 52,
+      "role": "Museum registrar. He records every object that enters or leaves the collection.",
+      "is_killer": true,
+      "personality": "Scholarly, courteous and vain.",
+      "speaking_style": "Precise, with a lecturer's rhythm.",
+      "story_they_tell": [
+        "After the patrons' reception I went to the registry. I was updating the accession register.",
+        "I was in the registry from about 10:00 pm until about 11:00 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:10 pm, and found Cecily Ashcombe at the door of the sculpture hall.",
+        "I did not go near the sculpture hall tonight until the scream.",
+        "I got on well with Beatrice. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Beatrice told me this afternoon that she had reprimanded Joe Lambert, who took it badly.",
+        "Rupert Sloane has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Joe Lambert.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:10 pm and spent the rest of the time numbering new labels.",
+              "I still say I never left the registry."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the registry the whole time. At about 10:40 pm I went to the conservation studio, only to switch off the extractor fan, and I got cleaning solvent on my blazer there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any folder of dealers' receipts, and I still say I never went to the sculpture hall."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been swapping small pieces from the stores for copies and selling the originals for two years.",
+              "Beatrice compared a coin in the stores with its old photograph this afternoon and was going to call the police in the morning.",
+              "At about 10:35 pm I went to the sculpture hall to beg for more time. We argued, and at about 10:40 pm I struck Beatrice with a small bronze bust.",
+              "Then I took the folder of dealers' receipts to the conservation studio and dissolved it in the solvent bath. That is how I got cleaning solvent on my blazer."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Beatrice Ashcombe. Had been swapping small pieces from the stores for copies and selling the originals.",
+        "what_really_happened": [
+          "10:35 pm: went to the sculpture hall and argued with Beatrice.",
+          "10:40 pm: struck Beatrice with a small bronze bust.",
+          "10:42 pm: took the folder of dealers' receipts to the conservation studio and dissolved it in the solvent bath.",
+          "10:50 pm: left the conservation studio and was seen by Joe Lambert."
+        ],
+        "giveaway_phrases": [
+          "conservation studio",
+          "folder of dealers' receipts",
+          "cleaning solvent",
+          "half-dissolved receipts",
+          "swapping small pieces from the stores for copies and selling the originals",
+          "dissolved it in the solvent bath"
+        ]
+      }
+    },
+    "joe_lambert": {
+      "name": "Joe Lambert",
+      "short_role": "Art handler",
+      "age": 41,
+      "role": "Art handler. He hangs the pictures and moves the crates.",
+      "is_killer": false,
+      "personality": "Steady, proud and easily slighted.",
+      "speaking_style": "Quiet and practical.",
+      "story_they_tell": [
+        "After the patrons' reception I was in the packing room, crating a painting for loan. I stayed there until I heard the scream at 11:10 pm.",
+        "I saw nobody after about 10:00 pm.",
+        "Things between me and Beatrice were fine, same as always."
+      ],
+      "shares_freely": [
+        "Rupert Sloane has been asking the people here odd questions.",
+        "Beatrice had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Rupert Sloane, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Beatrice reprimanded me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the packing room the whole time. From about 10:40 pm to 10:55 pm I was out on the loading dock, smoking and cooling off.",
+              "At about 10:50 pm I saw Laurence Vane coming out of the conservation studio, with cleaning solvent on his blazer. He did not see me.",
+              "The conservation studio is nowhere near the registry."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Beatrice reprimanded them today, and they were out on the loading dock at the time of the murder.",
+        "what_really_happened": [
+          "10:40 pm to 10:55 pm: out on the loading dock, smoking and cooling off.",
+          "10:50 pm: saw Laurence Vane leave the conservation studio."
+        ],
+        "giveaway_phrases": [
+          "reprimanded",
+          "out on the loading dock",
+          "smoking and cooling off",
+          "conservation studio",
+          "cleaning solvent"
+        ]
+      }
+    },
+    "rupert_sloane": {
+      "name": "Rupert Sloane",
+      "short_role": "A visitor",
+      "age": 37,
+      "role": "A visitor. Says they are an art history lecturer. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Cultured, amusing and very well informed.",
+      "speaking_style": "Languid and ironic.",
+      "story_they_tell": [
+        "I am an art history lecturer. I am here to study the bronzes for a book.",
+        "After the patrons' reception I stayed with the others until about 10:35 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:10 pm, and I came out.",
+        "I barely knew Beatrice Ashcombe."
+      ],
+      "shares_freely": [
+        "At about 10:35 pm, on my way to my quarters, I passed the sculpture hall and heard two people arguing inside. One was Beatrice, and she was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Beatrice say something like 'two years' and 'in the morning'.",
+        "Beatrice and Cecily Ashcombe did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Beatrice and Cecily Ashcombe did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not an art history lecturer. I am a buyer for a private collector, and I want to buy the best pieces quietly before anyone else can.",
+              "Two days ago I told Beatrice what I wanted, and she refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Beatrice had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a buyer for a private collector and wants to buy the best pieces quietly before anyone else can.",
+        "what_really_happened": [
+          "10:35 pm: passed the sculpture hall and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a buyer for a private collector",
+          "buy the best pieces quietly before anyone else can"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

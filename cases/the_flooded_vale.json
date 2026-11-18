@@ -1,0 +1,329 @@
+{
+  "id": "the_flooded_vale",
+  "case_number": "007",
+  "title": "The Flooded Vale",
+  "tagline": "Somerset, a wet March. The river has taken the road.",
+  "victim": "Cornelius Ware",
+  "generated": false,
+  "intro": "Netherby Hall. The river burst its banks and flooded the drive, and nobody can get in or out. At 11:10 pm Cornelius Ware, the master of the house, is found dead in the library. One of the four people left here did it.",
+  "public_facts": [
+    "This is Netherby Hall.",
+    "The river burst its banks and flooded the drive at about 8:30 pm. Nobody could come or go after that.",
+    "The family dinner ended at about 10:00 pm.",
+    "Cornelius Ware, 70, the master of the house, went to the library at about 10:15 pm.",
+    "Cornelius Ware was found dead in the library at 11:10 pm by Marian Ware. He had been struck on the head.",
+    "The people here that night were: Marian Ware (Cornelius's sister), Hugh Padgett (estate steward), Julian Frost (a visitor), Ned Oakes (groom)."
+  ],
+  "solution": {
+    "killer": "hugh_padgett",
+    "motive": "Hugh Padgett had been collecting higher rents than I entered in the rent book. Cornelius spoke to a tenant and learned what the rent really was and was going to call the police in the morning.",
+    "method": "At about 10:35 pm Hugh Padgett went to the library and argued with Cornelius, then struck him with a marble bookend. He took the true rent book to the laundry and burned it under the laundry copper.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "revenge",
+      "text": "Revenge for something Cornelius did that day"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of Netherby Hall"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Cornelius"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Cornelius exposing something they had done"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Estate office rent roll",
+      "description": "Hugh Padgett's rent roll from the estate office. The last entry is timed 10:10 pm. The job is not finished.",
+      "found_in": "Estate office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Butler's key book",
+      "description": "A key book showing the morning room desk key signed out to the lady of the house. It puts Marian Ware in the morning room from 10:30 pm to 10:52 pm.",
+      "found_in": "Butler's pantry",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Burned rent book",
+      "description": "What is left of the true rent book, found in the laundry. Parts of it can still be read.",
+      "found_in": "Laundry",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Hugh's tweed jacket",
+      "description": "Hugh Padgett's tweed jacket, left in the cloakroom. There is wood ash on it.",
+      "found_in": "Cloakroom",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Eviction notice",
+      "description": "A notice ordering the groom out of his cottage by the end of the month. It is dated today and names Ned Oakes.",
+      "found_in": "Library",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Water company survey",
+      "description": "A survey from a water company marking the whole valley to be flooded. It names Julian Frost.",
+      "found_in": "Julian's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "marian_ware": {
+      "name": "Marian Ware",
+      "short_role": "Cornelius's sister",
+      "age": 64,
+      "role": "Cornelius Ware's sister. She has kept house for her brother since his wife died.",
+      "is_killer": false,
+      "personality": "Sharp, proud and lonely.",
+      "speaking_style": "Crisp, with a schoolmistress tone.",
+      "story_they_tell": [
+        "After the family dinner I was in my bedroom saying my prayers.",
+        "Later I went to look for Cornelius. I found Cornelius dead in the library at 11:10 pm and I screamed.",
+        "Hugh Padgett was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Cornelius."
+      ],
+      "shares_freely": [
+        "Cornelius had been shut in the library every evening this week, in a foul mood.",
+        "This afternoon I heard Cornelius shouting at Ned Oakes. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not in my bedroom saying my prayers. From 10:30 pm to about 10:52 pm I was in the morning room, reading a copy of my brother's new will.",
+              "I was afraid he had cut me out of it. I lied because it makes me look guilty.",
+              "At 11:10 pm I went to the library and found Cornelius dead.",
+              "When Hugh Padgett reached me, he was not wearing his tweed jacket, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the morning room, reading a copy of my brother's new will. I was afraid he had cut me out of it.",
+        "what_really_happened": [
+          "10:30 pm to 10:52 pm: in the morning room, reading a copy of my brother's new will.",
+          "11:10 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "morning room",
+          "reading a copy of my brother's new will",
+          "I was afraid he had cut me out of it"
+        ]
+      }
+    },
+    "hugh_padgett": {
+      "name": "Hugh Padgett",
+      "short_role": "Estate steward",
+      "age": 48,
+      "role": "Estate steward. He collects the farm rents and keeps the estate accounts.",
+      "is_killer": true,
+      "personality": "Respectful, exact and quietly resentful.",
+      "speaking_style": "Formal, with careful grammar.",
+      "story_they_tell": [
+        "After the family dinner I went to the estate office. I was writing up the quarter's rents.",
+        "I was in the estate office from about 10:00 pm until about 11:00 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:10 pm, and found Marian Ware at the door of the library.",
+        "I did not go near the library tonight until the scream.",
+        "I got on well with Cornelius. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Cornelius told me this afternoon that he had evicted Ned Oakes, who took it badly.",
+        "Julian Frost has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Ned Oakes.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:10 pm and spent the rest of the time sorting old leases.",
+              "I still say I never left the estate office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the estate office the whole time. At about 10:40 pm I went to the laundry, only to see whether the flood had reached the laundry floor, and I got wood ash on my tweed jacket there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any true rent book, and I still say I never went to the library."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been collecting higher rents than I entered in the rent book for two years.",
+              "Cornelius spoke to a tenant and learned what the rent really was this afternoon and was going to call the police in the morning.",
+              "At about 10:35 pm I went to the library to beg for more time. We argued, and at about 10:40 pm I struck Cornelius with a marble bookend.",
+              "Then I took the true rent book to the laundry and burned it under the laundry copper. That is how I got wood ash on my tweed jacket."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Cornelius Ware. Had been collecting higher rents than I entered in the rent book.",
+        "what_really_happened": [
+          "10:35 pm: went to the library and argued with Cornelius.",
+          "10:40 pm: struck Cornelius with a marble bookend.",
+          "10:42 pm: took the true rent book to the laundry and burned it under the laundry copper.",
+          "10:50 pm: left the laundry and was seen by Ned Oakes."
+        ],
+        "giveaway_phrases": [
+          "laundry",
+          "true rent book",
+          "wood ash",
+          "burned rent book",
+          "collecting higher rents than I entered in the rent book",
+          "burned it under the laundry copper"
+        ]
+      }
+    },
+    "julian_frost": {
+      "name": "Julian Frost",
+      "short_role": "A visitor",
+      "age": 39,
+      "role": "A visitor. Says they are a landscape painter. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Dreamy on the surface, attentive underneath.",
+      "speaking_style": "Soft and vague.",
+      "story_they_tell": [
+        "I am a landscape painter. I am here to paint the vale in spring.",
+        "After the family dinner I stayed with the others until about 10:35 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:10 pm, and I came out.",
+        "I barely knew Cornelius Ware."
+      ],
+      "shares_freely": [
+        "At about 10:35 pm, on my way to my quarters, I passed the library and heard two people arguing inside. One was Cornelius, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Cornelius say something like 'two years' and 'in the morning'.",
+        "Cornelius and Marian Ware did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Cornelius and Marian Ware did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a landscape painter. I am an agent for a water company, and I want to buy the valley for a reservoir.",
+              "Two days ago I told Cornelius what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Cornelius had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really an agent for a water company and wants to buy the valley for a reservoir.",
+        "what_really_happened": [
+          "10:35 pm: passed the library and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "an agent for a water company",
+          "buy the valley for a reservoir"
+        ]
+      }
+    },
+    "ned_oakes": {
+      "name": "Ned Oakes",
+      "short_role": "Groom",
+      "age": 33,
+      "role": "Groom. He looks after the horses and the carriage.",
+      "is_killer": false,
+      "personality": "Easy-going until crossed.",
+      "speaking_style": "Slow country speech, plain words.",
+      "story_they_tell": [
+        "After the family dinner I was in the stables, bedding down the horses. I stayed there until I heard the scream at 11:10 pm.",
+        "I saw nobody after about 10:00 pm.",
+        "Things between me and Cornelius were fine, same as always."
+      ],
+      "shares_freely": [
+        "Julian Frost has been asking the people here odd questions.",
+        "Cornelius had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Julian Frost, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Cornelius evicted me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the stables the whole time. From about 10:40 pm to 10:55 pm I was at the back of the stables, moving feed sacks above the water.",
+              "At about 10:50 pm I saw Hugh Padgett coming out of the laundry, with wood ash on his tweed jacket. He did not see me.",
+              "The laundry is nowhere near the estate office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Cornelius evicted them today, and they were at the back of the stables at the time of the murder.",
+        "what_really_happened": [
+          "10:40 pm to 10:55 pm: at the back of the stables, moving feed sacks above the water.",
+          "10:50 pm: saw Hugh Padgett leave the laundry."
+        ],
+        "giveaway_phrases": [
+          "evicted",
+          "at the back of the stables",
+          "moving feed sacks above the water",
+          "laundry",
+          "wood ash"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

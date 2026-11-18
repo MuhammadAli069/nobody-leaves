@@ -1,0 +1,329 @@
+{
+  "id": "the_night_sleeper",
+  "case_number": "003",
+  "title": "The Night Sleeper",
+  "tagline": "The Highlands, February. Stopped dead in the snow.",
+  "victim": "Edmund Thorne",
+  "generated": false,
+  "intro": "The Caledonian night sleeper. A snowdrift blocked the line in both directions, and nobody can get in or out. At 10:40 pm Edmund Thorne, the chairman of the railway company, is found dead in the private saloon. One of the four people left here did it.",
+  "public_facts": [
+    "This is The Caledonian night sleeper.",
+    "A snowdrift blocked the line in both directions at about 8:00 pm. Nobody could come or go after that.",
+    "The late supper ended at about 9:30 pm.",
+    "Edmund Thorne, 66, the chairman of the railway company, went to the private saloon at about 9:45 pm.",
+    "Edmund Thorne was found dead in the private saloon at 10:40 pm by Lydia Thorne. He had been struck on the head.",
+    "The people here that night were: Walter Pryce (train purser), Lydia Thorne (Edmund's wife), Marcus Hale (a visitor), Tom Bridger (luggage porter)."
+  ],
+  "solution": {
+    "killer": "walter_pryce",
+    "motive": "Walter Pryce had been pocketing cash fares and selling the same tickets twice. Edmund checked the ticket stubs against the cash box and was going to call the police in the morning.",
+    "method": "At about 10:05 pm Walter Pryce went to the private saloon and argued with Edmund, then struck him with a brass signal lamp. He took the ticket stub book to the galley and fed it into the galley stove.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "revenge",
+      "text": "Revenge for something Edmund did that day"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of The Caledonian night sleeper"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Edmund"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Edmund exposing something they had done"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Purser's office fare sheet",
+      "description": "Walter Pryce's fare sheet from the purser's office. The last entry is timed 9:40 pm. The job is not finished.",
+      "found_in": "Purser's office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Dining car bar tab",
+      "description": "A bar tab for two brandies, signed for by a lady passenger. It puts Lydia Thorne in the dining car from 10:00 pm to 10:22 pm.",
+      "found_in": "Guard's compartment",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Half-burned ticket stubs",
+      "description": "What is left of the ticket stub book, found in the galley. Parts of it can still be read.",
+      "found_in": "Galley",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Walter's white jacket",
+      "description": "Walter Pryce's white jacket, left in the crew locker. There is stove black on it.",
+      "found_in": "Crew locker",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Fine docket",
+      "description": "A docket fining the luggage porter a week's wages for a dropped trunk. It is dated today and names Tom Bridger.",
+      "found_in": "Private saloon",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Rival railway memo",
+      "description": "A memo from a rival railway company about buying this line at a low price. It names Marcus Hale.",
+      "found_in": "Marcus's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "walter_pryce": {
+      "name": "Walter Pryce",
+      "short_role": "Train purser",
+      "age": 49,
+      "role": "Train purser. He handles the fares and the dining car accounts.",
+      "is_killer": true,
+      "personality": "Brisk, tidy and eager to please.",
+      "speaking_style": "Polite and quick, with a salesman's smile.",
+      "story_they_tell": [
+        "After the late supper I went to the purser's office. I was counting the day's fares.",
+        "I was in the purser's office from about 9:30 pm until about 10:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 10:40 pm, and found Lydia Thorne at the door of the private saloon.",
+        "I did not go near the private saloon tonight until the scream.",
+        "I got on well with Edmund. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Edmund told me this afternoon that he had fined Tom Bridger, who took it badly.",
+        "Marcus Hale has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Tom Bridger.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 9:40 pm and spent the rest of the time sorting the foreign coins.",
+              "I still say I never left the purser's office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the purser's office the whole time. At about 10:10 pm I went to the galley, only to fetch hot water for the tea urn, and I got stove black on my white jacket there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any ticket stub book, and I still say I never went to the private saloon."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been pocketing cash fares and selling the same tickets twice for two years.",
+              "Edmund checked the ticket stubs against the cash box this afternoon and was going to call the police in the morning.",
+              "At about 10:05 pm I went to the private saloon to beg for more time. We argued, and at about 10:10 pm I struck Edmund with a brass signal lamp.",
+              "Then I took the ticket stub book to the galley and fed it into the galley stove. That is how I got stove black on my white jacket."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Edmund Thorne. Had been pocketing cash fares and selling the same tickets twice.",
+        "what_really_happened": [
+          "10:05 pm: went to the private saloon and argued with Edmund.",
+          "10:10 pm: struck Edmund with a brass signal lamp.",
+          "10:12 pm: took the ticket stub book to the galley and fed it into the galley stove.",
+          "10:20 pm: left the galley and was seen by Tom Bridger."
+        ],
+        "giveaway_phrases": [
+          "galley",
+          "ticket stub book",
+          "stove black",
+          "half-burned ticket stubs",
+          "pocketing cash fares and selling the same tickets twice",
+          "fed it into the galley stove"
+        ]
+      }
+    },
+    "lydia_thorne": {
+      "name": "Lydia Thorne",
+      "short_role": "Edmund's wife",
+      "age": 58,
+      "role": "Edmund Thorne's wife. She travels with her husband on every inspection tour.",
+      "is_killer": false,
+      "personality": "Elegant and guarded.",
+      "speaking_style": "Soft-voiced and careful.",
+      "story_they_tell": [
+        "After the late supper I was resting in my sleeping berth.",
+        "Later I went to look for Edmund. I found Edmund dead in the private saloon at 10:40 pm and I screamed.",
+        "Walter Pryce was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Edmund."
+      ],
+      "shares_freely": [
+        "Edmund had been shut in the private saloon every evening this week, in a foul mood.",
+        "This afternoon I heard Edmund shouting at Tom Bridger. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not resting in my sleeping berth. From 10:00 pm to about 10:22 pm I was in the dining car, drinking brandy with a young officer.",
+              "I did not want my husband to hear of it. I lied because it makes me look guilty.",
+              "At 10:40 pm I went to the private saloon and found Edmund dead.",
+              "When Walter Pryce reached me, he was not wearing his white jacket, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the dining car, drinking brandy with a young officer. I did not want my husband to hear of it.",
+        "what_really_happened": [
+          "10:00 pm to 10:22 pm: in the dining car, drinking brandy with a young officer.",
+          "10:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "dining car",
+          "drinking brandy with a young officer",
+          "I did not want my husband to hear of it"
+        ]
+      }
+    },
+    "marcus_hale": {
+      "name": "Marcus Hale",
+      "short_role": "A visitor",
+      "age": 41,
+      "role": "A visitor. Says they are a commercial traveller in tea. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Easy company, and a good listener.",
+      "speaking_style": "Smooth and unhurried.",
+      "story_they_tell": [
+        "I am a commercial traveller in tea. I am here on my way to see buyers in the north.",
+        "After the late supper I stayed with the others until about 10:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 10:40 pm, and I came out.",
+        "I barely knew Edmund Thorne."
+      ],
+      "shares_freely": [
+        "At about 10:05 pm, on my way to my quarters, I passed the private saloon and heard two people arguing inside. One was Edmund, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Edmund say something like 'two years' and 'in the morning'.",
+        "Edmund and Lydia Thorne did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Edmund and Lydia Thorne did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a commercial traveller in tea. I am a buyer for a rival railway, and I want to take over this line cheaply.",
+              "Two days ago I told Edmund what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Edmund had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a buyer for a rival railway and wants to take over this line cheaply.",
+        "what_really_happened": [
+          "10:05 pm: passed the private saloon and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a buyer for a rival railway",
+          "take over this line cheaply"
+        ]
+      }
+    },
+    "tom_bridger": {
+      "name": "Tom Bridger",
+      "short_role": "Luggage porter",
+      "age": 29,
+      "role": "Luggage porter. He loads and guards the luggage van.",
+      "is_killer": false,
+      "personality": "Strong, sullen and proud.",
+      "speaking_style": "Few words, said flatly.",
+      "story_they_tell": [
+        "After the late supper I was in the luggage van, restacking the trunks. I stayed there until I heard the scream at 10:40 pm.",
+        "I saw nobody after about 9:30 pm.",
+        "Things between me and Edmund were fine, same as always."
+      ],
+      "shares_freely": [
+        "Marcus Hale has been asking the people here odd questions.",
+        "Edmund had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Marcus Hale, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Edmund fined me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the luggage van the whole time. From about 10:10 pm to 10:25 pm I was on the open platform at the end of the luggage van, smoking my pipe.",
+              "At about 10:20 pm I saw Walter Pryce coming out of the galley, with stove black on his white jacket. He did not see me.",
+              "The galley is nowhere near the purser's office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Edmund fined them today, and they were on the open platform at the end of the luggage van at the time of the murder.",
+        "what_really_happened": [
+          "10:10 pm to 10:25 pm: on the open platform at the end of the luggage van, smoking my pipe.",
+          "10:20 pm: saw Walter Pryce leave the galley."
+        ],
+        "giveaway_phrases": [
+          "fined",
+          "on the open platform at the end of the luggage van",
+          "smoking my pipe",
+          "galley",
+          "stove black"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

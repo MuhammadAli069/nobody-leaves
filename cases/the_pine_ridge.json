@@ -1,0 +1,329 @@
+{
+  "id": "the_pine_ridge",
+  "case_number": "002",
+  "title": "The Pine Ridge",
+  "tagline": "The Alps, mid January. Snowed in.",
+  "victim": "Margaret Ashdown",
+  "generated": false,
+  "intro": "Pine Ridge Lodge. An avalanche buried the only road, and nobody can get in or out. At 10:40 pm Margaret Ashdown, the owner of the lodge, is found dead in the study. One of the four people left here did it.",
+  "public_facts": [
+    "This is Pine Ridge Lodge.",
+    "An avalanche buried the only road at about 8:00 pm. Nobody could come or go after that.",
+    "The fondue supper ended at about 9:30 pm.",
+    "Margaret Ashdown, 63, the owner of the lodge, went to the study at about 9:45 pm.",
+    "Margaret Ashdown was found dead in the study at 10:40 pm by Henry Ashdown. She had been struck on the head.",
+    "The people here that night were: Henry Ashdown (Margaret's husband), Rosa Finch (ski technician), Clara Voss (a visitor), Victor Lang (lodge bookkeeper)."
+  ],
+  "solution": {
+    "killer": "victor_lang",
+    "motive": "Victor Lang had been skimming the ski hire takings and hiding it in a second cash book. Margaret found the second cash book and was going to call the police in the morning.",
+    "method": "At about 10:05 pm Victor Lang went to the study and argued with Margaret, then struck her with a bronze stag. He took the second cash book to the drying room and pushed it into the stove.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "cover_up",
+      "text": "To stop Margaret exposing something they had done"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of Pine Ridge Lodge"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Margaret"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Margaret did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Records room receipt tally",
+      "description": "Victor Lang's receipt tally from the records room. The last entry is timed 9:40 pm. The job is not finished.",
+      "found_in": "Records room",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Card room score pad",
+      "description": "A score pad in two hands with sums of money owed. It puts Henry Ashdown in the card room from 10:00 pm to 10:22 pm.",
+      "found_in": "Bar",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Charred cash book",
+      "description": "What is left of the second cash book, found in the drying room. Parts of it can still be read.",
+      "found_in": "Drying room",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Victor's cardigan",
+      "description": "Victor Lang's cardigan, left in the boot room. There is grey ash on it.",
+      "found_in": "Boot room",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Demotion notice",
+      "description": "A signed notice moving the ski technician down to junior pay. It is dated today and names Rosa Finch.",
+      "found_in": "Study",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Hotel chain letter",
+      "description": "A letter from a hotel chain asking for a private report on the lodge. It names Clara Voss.",
+      "found_in": "Clara's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "henry_ashdown": {
+      "name": "Henry Ashdown",
+      "short_role": "Margaret's husband",
+      "age": 60,
+      "role": "Margaret Ashdown's husband. He put up half the money for the lodge.",
+      "is_killer": false,
+      "personality": "Genial but vain.",
+      "speaking_style": "Hearty, fond of long words.",
+      "story_they_tell": [
+        "After the fondue supper I was reading in bed.",
+        "Later I went to look for Margaret. I found Margaret dead in the study at 10:40 pm and I screamed.",
+        "Victor Lang was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Margaret."
+      ],
+      "shares_freely": [
+        "Margaret had been shut in the study every evening this week, in a foul mood.",
+        "This afternoon I heard Margaret shouting at Rosa Finch. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not reading in bed. From 10:00 pm to about 10:22 pm I was in the card room, playing cards for money with the barman.",
+              "I had promised her I would stop gambling. I lied because it makes me look guilty.",
+              "At 10:40 pm I went to the study and found Margaret dead.",
+              "When Victor Lang reached me, he was not wearing his cardigan, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the card room, playing cards for money with the barman. I had promised her I would stop gambling.",
+        "what_really_happened": [
+          "10:00 pm to 10:22 pm: in the card room, playing cards for money with the barman.",
+          "10:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "card room",
+          "playing cards for money with the barman",
+          "I had promised her I would stop gambling"
+        ]
+      }
+    },
+    "rosa_finch": {
+      "name": "Rosa Finch",
+      "short_role": "Ski technician",
+      "age": 31,
+      "role": "Ski technician. She repairs and waxes the hire skis.",
+      "is_killer": false,
+      "personality": "Tough and impatient.",
+      "speaking_style": "Short and blunt.",
+      "story_they_tell": [
+        "After the fondue supper I was in the ski workshop, waxing the hire skis. I stayed there until I heard the scream at 10:40 pm.",
+        "I saw nobody after about 9:30 pm.",
+        "Things between me and Margaret were fine, same as always."
+      ],
+      "shares_freely": [
+        "Clara Voss has been asking the people here odd questions.",
+        "Margaret had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Clara Voss, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Margaret demoted me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the ski workshop the whole time. From about 10:10 pm to 10:25 pm I was outside the workshop side door, clearing snow from the step.",
+              "At about 10:20 pm I saw Victor Lang coming out of the drying room, with grey ash on his cardigan. He did not see me.",
+              "The drying room is nowhere near the records room."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Margaret demoted them today, and they were outside the workshop side door at the time of the murder.",
+        "what_really_happened": [
+          "10:10 pm to 10:25 pm: outside the workshop side door, clearing snow from the step.",
+          "10:20 pm: saw Victor Lang leave the drying room."
+        ],
+        "giveaway_phrases": [
+          "demoted",
+          "outside the workshop side door",
+          "clearing snow from the step",
+          "drying room",
+          "grey ash"
+        ]
+      }
+    },
+    "clara_voss": {
+      "name": "Clara Voss",
+      "short_role": "A visitor",
+      "age": 38,
+      "role": "A visitor. Says they are a wildlife photographer. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Watchful and wry.",
+      "speaking_style": "Soft and precise.",
+      "story_they_tell": [
+        "I am a wildlife photographer. I am here to photograph the winter birds.",
+        "After the fondue supper I stayed with the others until about 10:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 10:40 pm, and I came out.",
+        "I barely knew Margaret Ashdown."
+      ],
+      "shares_freely": [
+        "At about 10:05 pm, on my way to my quarters, I passed the study and heard two people arguing inside. One was Margaret, and she was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Margaret say something like 'two years' and 'in the morning'.",
+        "Margaret and Henry Ashdown did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Margaret and Henry Ashdown did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a wildlife photographer. I am a scout for a hotel chain, and I want to buy the lodge and turn it into a resort.",
+              "Two days ago I told Margaret what I wanted, and she refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Margaret had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a scout for a hotel chain and wants to buy the lodge and turn it into a resort.",
+        "what_really_happened": [
+          "10:05 pm: passed the study and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a scout for a hotel chain",
+          "buy the lodge and turn it into a resort"
+        ]
+      }
+    },
+    "victor_lang": {
+      "name": "Victor Lang",
+      "short_role": "Lodge bookkeeper",
+      "age": 44,
+      "role": "Lodge bookkeeper. He has kept the lodge's books for eight years.",
+      "is_killer": true,
+      "personality": "Neat, patient and quietly proud.",
+      "speaking_style": "Measured and exact, a little dry.",
+      "story_they_tell": [
+        "After the fondue supper I went to the records room. I was balancing the week's receipts.",
+        "I was in the records room from about 9:30 pm until about 10:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 10:40 pm, and found Henry Ashdown at the door of the study.",
+        "I did not go near the study tonight until the scream.",
+        "I got on well with Margaret. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Margaret told me this afternoon that she had demoted Rosa Finch, who took it badly.",
+        "Clara Voss has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Rosa Finch.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 9:40 pm and spent the rest of the time filing old invoices.",
+              "I still say I never left the records room."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the records room the whole time. At about 10:10 pm I went to the drying room, only to feed the stove before bed, and I got grey ash on my cardigan there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any second cash book, and I still say I never went to the study."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been skimming the ski hire takings and hiding it in a second cash book for two years.",
+              "Margaret found the second cash book this afternoon and was going to call the police in the morning.",
+              "At about 10:05 pm I went to the study to beg for more time. We argued, and at about 10:10 pm I struck Margaret with a bronze stag.",
+              "Then I took the second cash book to the drying room and pushed it into the stove. That is how I got grey ash on my cardigan."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Margaret Ashdown. Had been skimming the ski hire takings and hiding it in a second cash book.",
+        "what_really_happened": [
+          "10:05 pm: went to the study and argued with Margaret.",
+          "10:10 pm: struck Margaret with a bronze stag.",
+          "10:12 pm: took the second cash book to the drying room and pushed it into the stove.",
+          "10:20 pm: left the drying room and was seen by Rosa Finch."
+        ],
+        "giveaway_phrases": [
+          "drying room",
+          "second cash book",
+          "grey ash",
+          "charred cash book",
+          "skimming the ski hire takings and hiding it in a second cash book",
+          "pushed it into the stove"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

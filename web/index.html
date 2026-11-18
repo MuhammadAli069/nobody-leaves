@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nobody Leaves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="banner" class="banner" hidden></div>
+
+  <!-- Home -->
+  <section id="screen-home" class="screen briefing">
+    <div class="briefing-left">
+      <div class="case-label"><span class="pip"></span><span class="type">A detective game</span></div>
+      <div class="title-block">
+        <h1 class="game-title">Nobody <em>Leaves</em></h1>
+        <p class="tagline">Locked-in murders. Four suspects. One accusation.</p>
+        <p class="lead">Every case traps a handful of people in one place for one night, and one of them is a killer. The suspects answer in their own words, and every one of them is hiding something. Search for evidence, catch the lies, and name the right person before your actions run out.</p>
+        <div class="row gap">
+          <button id="h-cases" class="btn primary">Choose a case</button>
+        </div>
+      </div>
+      <div class="stats" id="h-stats"></div>
+    </div>
+    <div class="briefing-right">
+      <div class="sheet">
+        <div class="type red">How it works</div>
+        <h2>Rules of the house</h2>
+        <div class="rule"></div>
+        <ol class="facts">
+          <li><span>Ask the suspects anything. They answer in their own words.</span></li>
+          <li><span>Search the place for evidence. Some of it stays hidden until a suspect gives you a reason to look.</span></li>
+          <li><span>Show a suspect the exhibit that catches them out, and their story breaks.</span></li>
+          <li><span>Every question, search and exhibit shown costs one action.</span></li>
+          <li><span>You get one accusation: who, why, and the proof.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case files: one card per case -->
+  <section id="screen-cases" class="screen cases" hidden>
+    <div class="cases-head">
+      <div>
+        <button id="c-home" class="link type">&lt; Home</button>
+        <h2 class="big">Case files</h2>
+        <p class="sub">Pick a case. Each one is a separate mystery with its own suspects.</p>
+      </div>
+      <div class="board-count"><span id="c-solved" class="big amber"></span><span class="type muted" id="c-of"></span></div>
+    </div>
+    <div id="case-grid" class="case-grid"></div>
+  </section>
+
+  <!-- Case briefing -->
+  <section id="screen-briefing" class="screen briefing" hidden>
+    <div class="briefing-left">
+      <div class="case-label"><span class="pip"></span><span class="type" id="b-number">Case file</span></div>
+      <div class="title-block">
+        <h1 id="b-title">The Harbour Light</h1>
+        <p class="tagline" id="b-tagline"></p>
+        <p id="b-intro" class="lead"></p>
+        <div class="row gap">
+          <button id="b-begin" class="btn primary">Begin investigation</button>
+          <button id="b-how" class="btn ghost">How to play</button>
+          <button id="b-cases" class="btn ghost">All cases</button>
+        </div>
+        <p id="b-howto" class="howto" hidden>Question the suspects, search the place, and put what you find in front of the person it catches out. Every question, search and exhibit shown costs one action. When you are ready, make your accusation. You only get one.</p>
+      </div>
+      <div class="stats" id="b-stats"></div>
+    </div>
+    <div class="briefing-right">
+      <div class="sheet">
+        <div class="type red">What is known</div>
+        <h2>Preliminary report</h2>
+        <div class="rule"></div>
+        <ol id="b-facts" class="facts"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 and 3. The game: interrogation and evidence board -->
+  <section id="screen-game" class="screen game" hidden>
+    <header class="topbar">
+      <div class="brand"><span class="brand-name" id="top-title"></span><span class="type muted" id="top-number"></span></div>
+      <nav class="tabs">
+        <button class="tab" data-tab="interrogate">Interrogate</button>
+        <button class="tab" data-tab="evidence">Evidence</button>
+        <button class="tab" id="open-briefing">Case file</button>
+      </nav>
+      <div class="status">
+        <span class="type muted">Actions left</span>
+        <span id="actions" class="count"></span>
+        <button id="open-accuse" class="btn danger">Make accusation</button>
+      </div>
+    </header>
+
+    <div id="view-interrogate" class="body">
+      <aside class="suspects">
+        <div class="type muted pad-s">Suspects</div>
+        <div id="suspect-list"></div>
+        <div class="grow"></div>
+        <p class="tip">Pressure rises when you show a suspect evidence that catches them in a lie.</p>
+      </aside>
+
+      <main class="chat">
+        <div class="chat-head">
+          <div>
+            <h2 id="chat-name"></h2>
+            <p id="chat-about" class="small"></p>
+          </div>
+          <span id="chat-mood" class="chip"></span>
+        </div>
+        <div id="messages" class="messages"></div>
+        <div class="inputbar">
+          <input id="question" type="text" autocomplete="off" maxlength="300">
+          <div class="present-wrap">
+            <button id="present" class="btn ghost">Present evidence</button>
+            <div id="present-menu" class="menu" hidden></div>
+          </div>
+          <button id="ask" class="btn primary">Ask</button>
+        </div>
+      </main>
+
+      <aside class="panel">
+        <div>
+          <div class="panel-head"><span class="type muted">Evidence</span><span id="ev-count" class="type amber"></span></div>
+          <div id="ev-list"></div>
+        </div>
+        <div class="divider"></div>
+        <div>
+          <div class="type muted pad-b">Case log</div>
+          <div id="event-list" class="events"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="notes-wrap">
+          <div class="type muted pad-b">Notebook</div>
+          <textarea id="notes" placeholder="Your notes. Who said what, and what does not add up."></textarea>
+        </div>
+      </aside>
+    </div>
+
+    <div id="view-evidence" class="board" hidden>
+      <div class="board-head">
+        <div>
+          <h2 class="big">Evidence board</h2>
+          <p class="sub">Search a place to find what is hidden there. Each search costs one action.</p>
+        </div>
+        <div class="board-count"><span id="board-n" class="big amber"></span><span class="type muted" id="board-of"></span></div>
+      </div>
+      <div id="board-grid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- 4. Accusation -->
+  <section id="screen-accuse" class="screen accuse" hidden>
+    <div class="accuse-top">
+      <div class="nav"><button id="accuse-back" class="link type">&lt; Back to the case</button><span class="type muted">Final step</span></div>
+      <div>
+        <div class="type red">The accusation</div>
+        <h2 class="big" id="acc-question"></h2>
+        <p class="lead">You only get one. Get it wrong and the killer walks.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-head"><span class="num">01</span><span class="type">The killer</span></div><div id="acc-killers" class="stack"></div></div>
+        <div class="step"><div class="step-head"><span class="num">02</span><span class="type">The motive</span></div><div id="acc-motives" class="stack"></div></div>
+        <div class="step"><div class="step-head"><span class="num">03</span><span class="type">The proof</span></div><div id="acc-proof" class="stack"></div><p id="acc-hint" class="small muted"></p></div>
+      </div>
+    </div>
+    <div class="accuse-foot">
+      <div class="statement"><div class="type muted">Your statement</div><p id="acc-statement" class="typed"></p></div>
+      <div class="row gap"><button id="accuse-keep" class="btn ghost">Keep investigating</button><button id="accuse-go" class="btn danger" disabled>Accuse</button></div>
+    </div>
+  </section>
+
+  <!-- 5. Verdict -->
+  <section id="screen-verdict" class="screen verdict" hidden>
+    <div class="verdict-box">
+      <div id="v-label" class="type"></div>
+      <h1 id="v-headline"></h1>
+      <p id="v-summary" class="lead"></p>
+      <div class="sheet wide">
+        <div class="type red">What really happened</div>
+        <h2 id="v-killer"></h2>
+        <div class="rule"></div>
+        <p class="typed-dark"><strong>Why.</strong> <span id="v-motive"></span></p>
+        <p class="typed-dark"><strong>How.</strong> <span id="v-method"></span></p>
+      </div>
+      <div class="row gap center"><button id="v-again" class="btn primary">Play again</button><button id="v-cases" class="btn ghost">All cases</button></div>
+    </div>
+  </section>
+
+  <div id="toasts" class="toasts"></div>
+  <script src="app.js"></script>
+</body>
+</html>

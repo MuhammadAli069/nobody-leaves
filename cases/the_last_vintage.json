@@ -1,0 +1,329 @@
+{
+  "id": "the_last_vintage",
+  "case_number": "010",
+  "title": "The Last Vintage",
+  "tagline": "Kent, October. Harvest night, and the lane is under water.",
+  "victim": "Ambrose Marchant",
+  "generated": false,
+  "intro": "Marchant Vineyard. A flash flood washed out the bridge on the lane, and nobody can get in or out. At 11:40 pm Ambrose Marchant, the owner of the vineyard, is found dead in the tasting cellar. One of the four people left here did it.",
+  "public_facts": [
+    "This is Marchant Vineyard.",
+    "A flash flood washed out the bridge on the lane at about 9:00 pm. Nobody could come or go after that.",
+    "The harvest supper ended at about 10:30 pm.",
+    "Ambrose Marchant, 68, the owner of the vineyard, went to the tasting cellar at about 10:45 pm.",
+    "Ambrose Marchant was found dead in the tasting cellar at 11:40 pm by Vivian Marchant. He had been struck on the head.",
+    "The people here that night were: Olivia Trent (a visitor), Vivian Marchant (Ambrose's brother), Hannah Rudd (cellar hand), Colin Dray (sales manager)."
+  ],
+  "solution": {
+    "killer": "colin_dray",
+    "motive": "Colin Dray had been relabelling cheap wine as our best vintage and pocketing the difference. Ambrose opened a bottle of the best vintage and tasted cheap wine and was going to call the police in the morning.",
+    "method": "At about 11:05 pm Colin Dray went to the tasting cellar and argued with Ambrose, then struck him with a heavy glass decanter. He took the box of forged labels to the press house and tipped it into the grape crusher.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "private",
+      "text": "A private quarrel with Ambrose"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Ambrose did that day"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of Marchant Vineyard"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Ambrose exposing something they had done"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Sales office order book",
+      "description": "Colin Dray's order book from the sales office. The last entry is timed 10:40 pm. The job is not finished.",
+      "found_in": "Sales office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Signed sale note",
+      "description": "A signed note promising a quarter share of the vineyard to cover a debt. It puts Vivian Marchant in the farm kitchen from 11:00 pm to 11:22 pm.",
+      "found_in": "Farm office",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Pulped labels",
+      "description": "What is left of the box of forged labels, found in the press house. Parts of it can still be read.",
+      "found_in": "Press house",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Colin's shirt",
+      "description": "Colin Dray's shirt, left in the wash room. There is grape juice on it.",
+      "found_in": "Wash room",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Written warning",
+      "description": "A written warning accusing the cellar hand of stealing bottles. It is dated today and names Hannah Rudd.",
+      "found_in": "Tasting cellar",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Housing company plan",
+      "description": "A plan from a housing company showing the vineyard covered in new streets. It names Olivia Trent.",
+      "found_in": "Olivia's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "olivia_trent": {
+      "name": "Olivia Trent",
+      "short_role": "A visitor",
+      "age": 40,
+      "role": "A visitor. Says they are a wine tourist. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Smiling, well-dressed and businesslike.",
+      "speaking_style": "Pleasant and exact.",
+      "story_they_tell": [
+        "I am a wine tourist. I am here to see a harvest for myself.",
+        "After the harvest supper I stayed with the others until about 11:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:40 pm, and I came out.",
+        "I barely knew Ambrose Marchant."
+      ],
+      "shares_freely": [
+        "At about 11:05 pm, on my way to my quarters, I passed the tasting cellar and heard two people arguing inside. One was Ambrose, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Ambrose say something like 'two years' and 'in the morning'.",
+        "Ambrose and Vivian Marchant did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Ambrose and Vivian Marchant did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a wine tourist. I am a land agent for a housing company, and I want to buy the vineyard for building land.",
+              "Two days ago I told Ambrose what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Ambrose had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a land agent for a housing company and wants to buy the vineyard for building land.",
+        "what_really_happened": [
+          "11:05 pm: passed the tasting cellar and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a land agent for a housing company",
+          "buy the vineyard for building land"
+        ]
+      }
+    },
+    "vivian_marchant": {
+      "name": "Vivian Marchant",
+      "short_role": "Ambrose's brother",
+      "age": 55,
+      "role": "Ambrose Marchant's brother. He owns a quarter of the vineyard and does little of the work.",
+      "is_killer": false,
+      "personality": "Idle, witty and in debt.",
+      "speaking_style": "Drawling and amused.",
+      "story_they_tell": [
+        "After the harvest supper I was asleep in the guest room.",
+        "Later I went to look for Ambrose. I found Ambrose dead in the tasting cellar at 11:40 pm and I screamed.",
+        "Colin Dray was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Ambrose."
+      ],
+      "shares_freely": [
+        "Ambrose had been shut in the tasting cellar every evening this week, in a foul mood.",
+        "This afternoon I heard Ambrose shouting at Hannah Rudd. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in the guest room. From 11:00 pm to about 11:22 pm I was in the farm kitchen, signing away my share of the vineyard to a moneylender.",
+              "I owed money that I could not pay, and my brother did not know. I lied because it makes me look guilty.",
+              "At 11:40 pm I went to the tasting cellar and found Ambrose dead.",
+              "When Colin Dray reached me, he was not wearing his shirt, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the farm kitchen, signing away my share of the vineyard to a moneylender. I owed money that I could not pay, and my brother did not know.",
+        "what_really_happened": [
+          "11:00 pm to 11:22 pm: in the farm kitchen, signing away my share of the vineyard to a moneylender.",
+          "11:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "farm kitchen",
+          "signing away my share of the vineyard to a moneylender",
+          "I owed money that I could not pay, and my brother did not know"
+        ]
+      }
+    },
+    "hannah_rudd": {
+      "name": "Hannah Rudd",
+      "short_role": "Cellar hand",
+      "age": 28,
+      "role": "Cellar hand. She racks the barrels and runs the press.",
+      "is_killer": false,
+      "personality": "Hard-working and resentful.",
+      "speaking_style": "Flat and guarded.",
+      "story_they_tell": [
+        "After the harvest supper I was in the barrel hall, topping up the barrels. I stayed there until I heard the scream at 11:40 pm.",
+        "I saw nobody after about 10:30 pm.",
+        "Things between me and Ambrose were fine, same as always."
+      ],
+      "shares_freely": [
+        "Olivia Trent has been asking the people here odd questions.",
+        "Ambrose had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Olivia Trent, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Ambrose accused me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the barrel hall the whole time. From about 11:10 pm to 11:25 pm I was behind the barrel hall, sandbagging the door against the water.",
+              "At about 11:20 pm I saw Colin Dray coming out of the press house, with grape juice on his shirt. He did not see me.",
+              "The press house is nowhere near the sales office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Ambrose accused them today, and they were behind the barrel hall at the time of the murder.",
+        "what_really_happened": [
+          "11:10 pm to 11:25 pm: behind the barrel hall, sandbagging the door against the water.",
+          "11:20 pm: saw Colin Dray leave the press house."
+        ],
+        "giveaway_phrases": [
+          "accused",
+          "behind the barrel hall",
+          "sandbagging the door against the water",
+          "press house",
+          "grape juice"
+        ]
+      }
+    },
+    "colin_dray": {
+      "name": "Colin Dray",
+      "short_role": "Sales manager",
+      "age": 51,
+      "role": "Sales manager. He sells the wine and keeps the order book.",
+      "is_killer": true,
+      "personality": "Jovial, persuasive and thin-skinned.",
+      "speaking_style": "Loud and friendly, always selling.",
+      "story_they_tell": [
+        "After the harvest supper I went to the sales office. I was writing up the export orders.",
+        "I was in the sales office from about 10:30 pm until about 11:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:40 pm, and found Vivian Marchant at the door of the tasting cellar.",
+        "I did not go near the tasting cellar tonight until the scream.",
+        "I got on well with Ambrose. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Ambrose told me this afternoon that he had accused Hannah Rudd, who took it badly.",
+        "Olivia Trent has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Hannah Rudd.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:40 pm and spent the rest of the time addressing shipping labels.",
+              "I still say I never left the sales office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the sales office the whole time. At about 11:10 pm I went to the press house, only to see that the crusher was switched off, and I got grape juice on my shirt there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any box of forged labels, and I still say I never went to the tasting cellar."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been relabelling cheap wine as our best vintage and pocketing the difference for two years.",
+              "Ambrose opened a bottle of the best vintage and tasted cheap wine this afternoon and was going to call the police in the morning.",
+              "At about 11:05 pm I went to the tasting cellar to beg for more time. We argued, and at about 11:10 pm I struck Ambrose with a heavy glass decanter.",
+              "Then I took the box of forged labels to the press house and tipped it into the grape crusher. That is how I got grape juice on my shirt."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Ambrose Marchant. Had been relabelling cheap wine as our best vintage and pocketing the difference.",
+        "what_really_happened": [
+          "11:05 pm: went to the tasting cellar and argued with Ambrose.",
+          "11:10 pm: struck Ambrose with a heavy glass decanter.",
+          "11:12 pm: took the box of forged labels to the press house and tipped it into the grape crusher.",
+          "11:20 pm: left the press house and was seen by Hannah Rudd."
+        ],
+        "giveaway_phrases": [
+          "press house",
+          "box of forged labels",
+          "grape juice",
+          "pulped labels",
+          "relabelling cheap wine as our best vintage and pocketing the difference",
+          "tipped it into the grape crusher"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

@@ -1,0 +1,374 @@
+{
+  "id": "harbour_light",
+  "case_number": "001",
+  "title": "The Harbour Light",
+  "tagline": "Cornwall, late November. Nobody in, nobody out.",
+  "victim": "Arthur Pembroke",
+  "intro": "The Harbour Light Hotel, Cornwall, late November. A storm has flooded the coast road and cut the hotel off for the night. At 11:40 pm the owner, Arthur Pembroke, is found dead in his office. Nobody has come or gone. One of the four people left in the building killed him.",
+  "public_facts": [
+    "The Harbour Light is a small seaside hotel in Cornwall. It is the off-season and there is only one guest.",
+    "A storm flooded the coast road at about 9 pm. Nobody could enter or leave the hotel after that.",
+    "Dinner service ended at about 10:30 pm.",
+    "Arthur Pembroke, 62, the hotel's owner, went to his ground-floor office at about 10:45 pm.",
+    "Arthur was found dead in his office at 11:40 pm by his wife, Eleanor. He had been struck on the head.",
+    "The people in the hotel that night were: Eleanor Pembroke (Arthur's wife), Daniel Hart (hotel manager), Thomas Reed (chef) and Grace Whitfield (the only guest)."
+  ],
+  "solution": {
+    "killer": "daniel_hart",
+    "motive": "Daniel had been stealing from the hotel for two years. Arthur found the gaps in the accounts ledger and told Daniel he would call the police in the morning.",
+    "method": "At about 11:05 pm Daniel went to the office and argued with Arthur, then struck him with the brass ship's lantern from the desk. He took the ledger down to the boiler room and burned the pages in the furnace.",
+    "timeline": [
+      "22:30 Dinner service ends.",
+      "22:40 Daniel makes his last entry on the wine cellar stock sheet and leaves the cellar.",
+      "22:45 Arthur goes to his office.",
+      "23:00 Eleanor starts a phone call to her sister from the lounge telephone.",
+      "23:05 Daniel enters the office. Grace, passing in the corridor, hears two men arguing.",
+      "23:10 Daniel strikes Arthur with the brass lantern.",
+      "23:12 Daniel takes the ledger down to the boiler room and burns it.",
+      "23:20 Thomas, outside the kitchen back door, sees Daniel come up the boiler room stairs with soot on his sleeve.",
+      "23:22 Eleanor ends her phone call.",
+      "23:40 Eleanor goes to the office and finds Arthur dead."
+    ],
+    "motive_id": "cover_theft",
+    "key_evidence": [
+      "burned_ledger",
+      "sooty_jacket"
+    ]
+  },
+  "motives": [
+    {
+      "id": "cover_theft",
+      "text": "To stop Arthur exposing something they had done"
+    },
+    {
+      "id": "revenge_sacking",
+      "text": "Revenge for something Arthur did that day"
+    },
+    {
+      "id": "force_sale",
+      "text": "To get control of the hotel"
+    },
+    {
+      "id": "escape_marriage",
+      "text": "A private quarrel with Arthur"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "stock_sheet",
+      "name": "Wine cellar stock sheet",
+      "description": "Daniel's stock-take sheet from the cellar. The last entry is timed 10:40 pm. Half the racks are not counted.",
+      "found_in": "Wine cellar",
+      "locked": false
+    },
+    {
+      "id": "phone_log",
+      "name": "Lounge telephone log",
+      "description": "The hotel switchboard shows an outside call from the lounge telephone from 11:00 pm to 11:22 pm, to a number in Bristol.",
+      "found_in": "Reception desk",
+      "locked": false
+    },
+    {
+      "id": "burned_ledger",
+      "name": "Burned ledger pages",
+      "description": "Half-burned pages from the hotel accounts ledger, pulled from the boiler room furnace. Some columns of figures are still readable.",
+      "found_in": "Boiler room",
+      "locked": true
+    },
+    {
+      "id": "sooty_jacket",
+      "name": "Daniel's jacket",
+      "description": "A manager's jacket hanging in the staff room. The right cuff is black with soot.",
+      "found_in": "Staff room",
+      "locked": true
+    },
+    {
+      "id": "dismissal_letter",
+      "name": "Dismissal letter",
+      "description": "A letter signed by Arthur Pembroke, dated today, ending Thomas Reed's employment with one week's notice.",
+      "found_in": "Arthur's office",
+      "locked": false
+    },
+    {
+      "id": "offer_letter",
+      "name": "Developer's offer",
+      "description": "A letter from Carrow Developments offering to buy the Harbour Light Hotel. It names Grace Whitfield as their agent.",
+      "found_in": "Grace's room",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "eleanor_pembroke": {
+      "name": "Eleanor Pembroke",
+      "short_role": "Arthur's wife",
+      "age": 57,
+      "role": "Arthur's wife of thirty years. She helps run the front of house.",
+      "is_killer": false,
+      "personality": "Reserved, proud and tired. Shaken by the death but not falling apart. Dislikes being pitied and dislikes personal questions.",
+      "speaking_style": "Quiet and precise. Short sentences. Goes cold and formal when pushed about her marriage.",
+      "story_they_tell": [
+        "After dinner I went up to bed, and I was asleep.",
+        "I woke, saw that Arthur had not come up, and went downstairs to look for him.",
+        "I found him on the floor of his office at 11:40 pm and I screamed.",
+        "Daniel Hart was the first to reach me, within a minute.",
+        "My marriage was perfectly fine."
+      ],
+      "shares_freely": [
+        "Arthur had been shut in his office with the account books every evening this week, in a foul mood.",
+        "This afternoon I heard Arthur shouting at Thomas Reed in the kitchen. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone in the hotel would do this.",
+      "pressure": {
+        "evidence": {
+          "phone_log": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "admits": [
+              "I was not asleep. From 11:00 pm to about 11:22 pm I was in the lounge, on the telephone to my sister Margaret in Bristol.",
+              "I was arranging to stay with her, because I was going to leave Arthur in the morning. I lied because it makes me look guilty.",
+              "After the call I sat in the lounge finding the nerve to tell him. At 11:40 pm I went to the office and found him dead.",
+              "The lounge is at the far end of the ground floor from the office, so I heard nothing from there.",
+              "When Daniel reached me he was in his shirt sleeves with no jacket on, which is unusual for him."
+            ],
+            "unlocks": [
+              "sooty_jacket"
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "what_really_happened": [
+          "She was not asleep. She had a suitcase packed and was planning to leave Arthur in the morning.",
+          "From 11:00 pm to about 11:22 pm she was in the lounge on the telephone to her sister Margaret in Bristol, arranging to stay with her.",
+          "After the call she sat in the lounge gathering her nerve to tell Arthur.",
+          "At 11:40 pm she went to the office to tell him she was leaving, and found him dead.",
+          "She did not kill Arthur and does not know who did."
+        ],
+        "what_they_witnessed": [
+          "The lounge is at the far end of the ground floor from the office. She heard nothing from the office during her call.",
+          "Daniel reached her within a minute of her scream. He was in his shirt sleeves, with no jacket on.",
+          "Arthur had been shut in the office with the account books every evening that week and was in a foul mood.",
+          "She heard Arthur shouting at Thomas Reed in the kitchen that afternoon but does not know what about."
+        ],
+        "secret": "She was about to leave her husband, and she lied about being asleep.",
+        "lies_about": [
+          "Being asleep in bed. She says this because a wife who was about to leave her husband looks like a suspect.",
+          "The state of her marriage. She says it was 'perfectly fine'."
+        ]
+      }
+    },
+    "daniel_hart": {
+      "name": "Daniel Hart",
+      "short_role": "Hotel manager",
+      "age": 41,
+      "role": "Hotel manager. He has run the Harbour Light for Arthur for six years.",
+      "is_killer": true,
+      "personality": "Smooth, polite and helpful on the surface. Likes to be seen as the one keeping things under control. Gets clipped and formal when he feels cornered.",
+      "speaking_style": "Calm, professional, well-spoken. Calls the detective 'Detective'. Offers to help. Never raises his voice.",
+      "story_they_tell": [
+        "After dinner service I went down to the wine cellar to do the monthly stock-take.",
+        "I was in the wine cellar from about 10:30 pm until about 11:30 pm. I was alone and saw nobody.",
+        "I came up when I heard Eleanor scream at 11:40 pm, and found her at the office door.",
+        "I did not go near Arthur's office tonight until the scream.",
+        "I got on well with Arthur, and the hotel is doing fine for the off-season."
+      ],
+      "shares_freely": [
+        "Arthur told me this afternoon that he had sacked Thomas Reed, the chef, and that Thomas took it badly.",
+        "Eleanor and Arthur had been cold with each other for months.",
+        "Grace Whitfield asked a lot of questions about the hotel's finances for a holiday guest."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Thomas Reed.",
+      "pressure": {
+        "evidence": {
+          "stock_sheet": 1,
+          "sooty_jacket": 2,
+          "burned_ledger": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "admits": [
+              "The stock-take was not finished. I stopped counting at about 10:40 pm and spent the rest of the time moving racks and checking the cellar for storm leaks.",
+              "I still say I never left the cellar."
+            ],
+            "unlocks": []
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "admits": [
+              "I was not in the cellar the whole time. At about 11:10 pm I went to the boiler room, because the boiler pressure was dropping in the storm, and I got soot on my jacket cuff there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any papers in the furnace, and I still say I never went to the office."
+            ],
+            "unlocks": []
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "admits": [
+              "I have been stealing from the hotel for two years by altering the accounts ledger.",
+              "Arthur found out this afternoon and was going to call the police in the morning.",
+              "At about 11:05 pm I went to his office to beg for more time. We argued, and at about 11:10 pm I struck him with the brass ship's lantern from his desk. He died.",
+              "I burned the ledger in the boiler room furnace, which is how I got soot on my cuff."
+            ],
+            "unlocks": []
+          }
+        ]
+      },
+      "hidden_truth": {
+        "what_really_happened": [
+          "He has been stealing money from the hotel for two years by altering the accounts ledger.",
+          "That afternoon Arthur told him he had found the gaps and would call the police in the morning.",
+          "He was in the wine cellar only from 10:30 pm to 10:40 pm.",
+          "At about 11:05 pm he went to Arthur's office to beg for more time. They argued.",
+          "At about 11:10 pm he struck Arthur with the brass ship's lantern from the desk and Arthur died.",
+          "He took the ledger down to the boiler room and burned it in the furnace. He got soot on his right jacket cuff.",
+          "At about 11:20 pm he came back up the boiler room stairs. He does not know anyone saw him.",
+          "He hung his jacket in the staff room and waited until he heard Eleanor scream."
+        ],
+        "what_they_witnessed": [
+          "He knows Thomas Reed was sacked by Arthur that afternoon, because Arthur told him.",
+          "He knows Eleanor and Arthur had been cold with each other for months.",
+          "He knows Grace Whitfield asked a lot of questions about the hotel's finances for a holiday guest."
+        ],
+        "secret": "He killed Arthur, and he has been stealing from the hotel.",
+        "lies_about": [
+          "Where he was between 10:40 pm and 11:30 pm. He insists he was in the cellar the whole time.",
+          "The state of the hotel's finances and his relationship with Arthur.",
+          "Whether he went near the office or the boiler room that night."
+        ]
+      }
+    },
+    "thomas_reed": {
+      "name": "Thomas Reed",
+      "short_role": "Head chef",
+      "age": 34,
+      "role": "Head chef. He has worked at the Harbour Light for three years.",
+      "is_killer": false,
+      "personality": "Blunt, hot-tempered and defensive. Not a good liar. Feels the world is against him. Loyal to people who treat him fairly.",
+      "speaking_style": "Rough and direct, a bit sarcastic. Short answers. Gets irritated quickly and says 'look' a lot.",
+      "story_they_tell": [
+        "After service I cleaned down the kitchen. I stayed in the kitchen until I heard the scream at 11:40 pm.",
+        "I saw nobody after about 10:30 pm.",
+        "Things between me and Arthur were fine, same as always."
+      ],
+      "shares_freely": [
+        "The guest, Grace Whitfield, has been snooping about all week and asking the staff odd questions.",
+        "Arthur was tight with money and always on at me about food costs."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Grace Whitfield, who has been snooping.",
+      "pressure": {
+        "evidence": {
+          "dismissal_letter": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "admits": [
+              "Arthur sacked me this afternoon, with one week's notice, after a shouting match about food costs. I hid it because it makes me look guilty.",
+              "I was not in the kitchen the whole time. From about 11:10 pm to 11:25 pm I was outside the kitchen back door having a smoke.",
+              "At about 11:20 pm I saw Daniel Hart come up the outside stairs from the boiler room. He had his jacket on, with black soot on the right sleeve, and he was rubbing at it. He did not see me.",
+              "The boiler room is at the opposite end of the basement from the wine cellar."
+            ],
+            "unlocks": [
+              "burned_ledger",
+              "sooty_jacket"
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "what_really_happened": [
+          "Arthur sacked him that afternoon with one week's notice, after a shouting match in the kitchen about food costs.",
+          "He was angry, and decided to help himself to six bottles of good wine from the kitchen store as 'severance'.",
+          "At about 11:10 pm he carried the bottles out of the kitchen back door to his car.",
+          "He stayed outside the back door smoking until about 11:25 pm, then went back into the kitchen.",
+          "He did not kill Arthur and does not know for certain who did."
+        ],
+        "what_they_witnessed": [
+          "At about 11:20 pm, from the kitchen back door, he saw Daniel Hart come up the outside stairs from the boiler room.",
+          "Daniel was wearing his jacket, and there was black soot on his right sleeve. Daniel was rubbing at it.",
+          "The boiler room is not the wine cellar. They are at opposite ends of the basement.",
+          "Daniel did not see him."
+        ],
+        "secret": "He was sacked that day, and he was outside stealing wine at the time of the murder.",
+        "lies_about": [
+          "Being in the kitchen the whole time. Admitting he was outside means admitting the theft.",
+          "His relationship with Arthur. He hides the sacking because it gives him a motive."
+        ]
+      }
+    },
+    "grace_whitfield": {
+      "name": "Grace Whitfield",
+      "short_role": "The only guest",
+      "age": 48,
+      "role": "The hotel's only guest. She says she is a travel writer on a quiet week away.",
+      "is_killer": false,
+      "personality": "Charming, sharp and observant. Enjoys the conversation and treats it a little like a game. Careful with her words.",
+      "speaking_style": "Warm, articulate, lightly amused. Answers a question with a question when she wants to dodge.",
+      "story_they_tell": [
+        "I am a travel writer, here for a week to write about the Cornish coast in winter.",
+        "After dinner I read in the library until about 11:05 pm, then I went up to my room.",
+        "I was in my room when I heard the scream at 11:40 pm, and I came down.",
+        "I barely knew Arthur Pembroke."
+      ],
+      "shares_freely": [
+        "At about 11:05 pm, on my way to the stairs, I passed the office door and heard two men arguing inside. One was Arthur, and he was the loud one. The other man's voice was low and controlled. I did not see him and I cannot say who it was.",
+        "I heard Arthur say something like 'two years' and 'in the morning'.",
+        "The Pembrokes did not seem a happy couple."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that the Pembrokes did not seem a happy couple.",
+      "pressure": {
+        "evidence": {
+          "offer_letter": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "admits": [
+              "I am not a travel writer. I am an agent for Carrow Developments, who want to buy the hotel and build flats.",
+              "I made Arthur an offer two days ago and he refused angrily. I stayed on hoping he would be forced to sell.",
+              "From what I have learned this week, the hotel is losing far more money than an empty off-season explains. Someone has been bleeding it."
+            ],
+            "unlocks": []
+          }
+        ]
+      },
+      "hidden_truth": {
+        "what_really_happened": [
+          "She is not a travel writer. She is an agent for Carrow Developments, who want to buy the hotel and knock it down for flats.",
+          "She made Arthur an offer two days ago and he refused angrily.",
+          "She stayed on to find out how badly the hotel was doing, hoping he would be forced to sell.",
+          "At about 11:05 pm she left the library and walked past the office on her way to the stairs.",
+          "She went to her room and stayed there until the scream.",
+          "She did not kill Arthur and does not know for certain who did."
+        ],
+        "what_they_witnessed": [
+          "At about 11:05 pm, passing the office door, she heard two men arguing inside. One was Arthur.",
+          "She did not see the other man. His voice was low and controlled, not shouting. Arthur was the loud one.",
+          "She heard Arthur say something like 'two years' and 'in the morning'.",
+          "From what she has learned this week, the hotel is losing far more money than an empty off-season explains."
+        ],
+        "secret": "She is a property developer's agent, not a travel writer, and Arthur had refused her offer.",
+        "lies_about": [
+          "Her job and her reason for staying at the hotel.",
+          "How well she knew Arthur. She hides their meeting about the offer."
+        ]
+      }
+    }
+  },
+  "curated": true
+}

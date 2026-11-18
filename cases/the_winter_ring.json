@@ -1,0 +1,329 @@
+{
+  "id": "the_winter_ring",
+  "case_number": "014",
+  "title": "The Winter Ring",
+  "tagline": "Yorkshire, deep January. The lane is gone under the snow.",
+  "victim": "Augustus Marlow",
+  "generated": false,
+  "intro": "Marlow's Circus winter quarters. Snow drifts closed the lane to the farm, and nobody can get in or out. At 10:40 pm Augustus Marlow, the owner of the circus, is found dead in the wagon office. One of the four people left here did it.",
+  "public_facts": [
+    "This is Marlow's Circus winter quarters.",
+    "Snow drifts closed the lane to the farm at about 8:00 pm. Nobody could come or go after that.",
+    "The supper ended at about 9:30 pm.",
+    "Augustus Marlow, 69, the owner of the circus, went to the wagon office at about 9:45 pm.",
+    "Augustus Marlow was found dead in the wagon office at 10:40 pm by Lottie Marlow. He had been struck on the head.",
+    "The people here that night were: Horace Pell (advance manager), Lottie Marlow (Augustus's wife), Felix Arden (a visitor), Maggie Sorrel (horse trainer)."
+  ],
+  "solution": {
+    "killer": "horace_pell",
+    "motive": "Horace Pell had been selling the show's horses and faking the feed bills. Augustus counted the horses and found three missing and was going to call the police in the morning.",
+    "method": "At about 10:05 pm Horace Pell went to the wagon office and argued with Augustus, then struck him with an iron tent stake. He took the feed bill book to the forge and threw it on the forge fire.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "revenge",
+      "text": "Revenge for something Augustus did that day"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Augustus exposing something they had done"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of Marlow's Circus winter quarters"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Augustus"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Ticket wagon route book",
+      "description": "Horace Pell's route book from the ticket wagon. The last entry is timed 9:40 pm. The job is not finished.",
+      "found_in": "Ticket wagon",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Collector's receipt",
+      "description": "A receipt for costumes and stage jewels bought that evening. It puts Lottie Marlow in the cookhouse from 10:00 pm to 10:22 pm.",
+      "found_in": "Tack room",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Scorched bill book",
+      "description": "What is left of the feed bill book, found in the forge. Parts of it can still be read.",
+      "found_in": "Forge",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Horace's overcoat",
+      "description": "Horace Pell's overcoat, left in the wardrobe wagon. There is cinder dust on it.",
+      "found_in": "Wardrobe wagon",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Notice to quit",
+      "description": "A notice telling the horse trainer to leave the show by the end of the month. It is dated today and names Maggie Sorrel.",
+      "found_in": "Wagon office",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Rival show contracts",
+      "description": "A stack of blank contracts from a rival circus. It names Felix Arden.",
+      "found_in": "Felix's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "horace_pell": {
+      "name": "Horace Pell",
+      "short_role": "Advance manager",
+      "age": 53,
+      "role": "Advance manager. He books the towns and pays the bills.",
+      "is_killer": true,
+      "personality": "Genial, plausible and tired.",
+      "speaking_style": "Smooth patter, like a ringside barker.",
+      "story_they_tell": [
+        "After the supper I went to the ticket wagon. I was working out next season's route.",
+        "I was in the ticket wagon from about 9:30 pm until about 10:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 10:40 pm, and found Lottie Marlow at the door of the wagon office.",
+        "I did not go near the wagon office tonight until the scream.",
+        "I got on well with Augustus. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Augustus told me this afternoon that he had dismissed Maggie Sorrel, who took it badly.",
+        "Felix Arden has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Maggie Sorrel.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 9:40 pm and spent the rest of the time addressing posters.",
+              "I still say I never left the ticket wagon."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the ticket wagon the whole time. At about 10:10 pm I went to the forge, only to warm my hands at the fire, and I got cinder dust on my overcoat there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any feed bill book, and I still say I never went to the wagon office."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been selling the show's horses and faking the feed bills for two years.",
+              "Augustus counted the horses and found three missing this afternoon and was going to call the police in the morning.",
+              "At about 10:05 pm I went to the wagon office to beg for more time. We argued, and at about 10:10 pm I struck Augustus with an iron tent stake.",
+              "Then I took the feed bill book to the forge and threw it on the forge fire. That is how I got cinder dust on my overcoat."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Augustus Marlow. Had been selling the show's horses and faking the feed bills.",
+        "what_really_happened": [
+          "10:05 pm: went to the wagon office and argued with Augustus.",
+          "10:10 pm: struck Augustus with an iron tent stake.",
+          "10:12 pm: took the feed bill book to the forge and threw it on the forge fire.",
+          "10:20 pm: left the forge and was seen by Maggie Sorrel."
+        ],
+        "giveaway_phrases": [
+          "forge",
+          "feed bill book",
+          "cinder dust",
+          "scorched bill book",
+          "selling the show's horses and faking the feed bills",
+          "threw it on the forge fire"
+        ]
+      }
+    },
+    "lottie_marlow": {
+      "name": "Lottie Marlow",
+      "short_role": "Augustus's wife",
+      "age": 62,
+      "role": "Augustus Marlow's wife. She was the star rider and now sews the costumes.",
+      "is_killer": false,
+      "personality": "Proud, sentimental and shrewd.",
+      "speaking_style": "Rich and theatrical.",
+      "story_they_tell": [
+        "After the supper I was asleep in our living wagon.",
+        "Later I went to look for Augustus. I found Augustus dead in the wagon office at 10:40 pm and I screamed.",
+        "Horace Pell was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Augustus."
+      ],
+      "shares_freely": [
+        "Augustus had been shut in the wagon office every evening this week, in a foul mood.",
+        "This afternoon I heard Augustus shouting at Maggie Sorrel. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in our living wagon. From 10:00 pm to about 10:22 pm I was in the cookhouse, selling my old costumes and jewels to a collector.",
+              "I meant to leave the show with the money. I lied because it makes me look guilty.",
+              "At 10:40 pm I went to the wagon office and found Augustus dead.",
+              "When Horace Pell reached me, he was not wearing his overcoat, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the cookhouse, selling my old costumes and jewels to a collector. I meant to leave the show with the money.",
+        "what_really_happened": [
+          "10:00 pm to 10:22 pm: in the cookhouse, selling my old costumes and jewels to a collector.",
+          "10:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "cookhouse",
+          "selling my old costumes and jewels to a collector",
+          "I meant to leave the show with the money"
+        ]
+      }
+    },
+    "felix_arden": {
+      "name": "Felix Arden",
+      "short_role": "A visitor",
+      "age": 35,
+      "role": "A visitor. Says they are a newspaper sketch artist. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Quiet, friendly and always sketching.",
+      "speaking_style": "Mild and amused.",
+      "story_they_tell": [
+        "I am a newspaper sketch artist. I am here to draw the animals for a magazine.",
+        "After the supper I stayed with the others until about 10:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 10:40 pm, and I came out.",
+        "I barely knew Augustus Marlow."
+      ],
+      "shares_freely": [
+        "At about 10:05 pm, on my way to my quarters, I passed the wagon office and heard two people arguing inside. One was Augustus, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Augustus say something like 'two years' and 'in the morning'.",
+        "Augustus and Lottie Marlow did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Augustus and Lottie Marlow did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a newspaper sketch artist. I am an agent for a rival show, and I want to hire away the best performers.",
+              "Two days ago I told Augustus what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Augustus had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really an agent for a rival show and wants to hire away the best performers.",
+        "what_really_happened": [
+          "10:05 pm: passed the wagon office and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "an agent for a rival show",
+          "hire away the best performers"
+        ]
+      }
+    },
+    "maggie_sorrel": {
+      "name": "Maggie Sorrel",
+      "short_role": "Horse trainer",
+      "age": 32,
+      "role": "Horse trainer. She trains and beds down the ring horses.",
+      "is_killer": false,
+      "personality": "Fearless, loyal and quick to anger.",
+      "speaking_style": "Direct, with a stable-yard bark.",
+      "story_they_tell": [
+        "After the supper I was in the horse barn, rubbing down the ring horses. I stayed there until I heard the scream at 10:40 pm.",
+        "I saw nobody after about 9:30 pm.",
+        "Things between me and Augustus were fine, same as always."
+      ],
+      "shares_freely": [
+        "Felix Arden has been asking the people here odd questions.",
+        "Augustus had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Felix Arden, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Augustus dismissed me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the horse barn the whole time. From about 10:10 pm to 10:25 pm I was behind the horse barn, breaking the ice on the water trough.",
+              "At about 10:20 pm I saw Horace Pell coming out of the forge, with cinder dust on his overcoat. He did not see me.",
+              "The forge is nowhere near the ticket wagon."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Augustus dismissed them today, and they were behind the horse barn at the time of the murder.",
+        "what_really_happened": [
+          "10:10 pm to 10:25 pm: behind the horse barn, breaking the ice on the water trough.",
+          "10:20 pm: saw Horace Pell leave the forge."
+        ],
+        "giveaway_phrases": [
+          "dismissed",
+          "behind the horse barn",
+          "breaking the ice on the water trough",
+          "forge",
+          "cinder dust"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

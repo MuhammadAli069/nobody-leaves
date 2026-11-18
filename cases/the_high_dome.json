@@ -1,0 +1,329 @@
+{
+  "id": "the_high_dome",
+  "case_number": "008",
+  "title": "The High Dome",
+  "tagline": "The Pennines, January. Whiteout on the mountain road.",
+  "victim": "Leonard Bray",
+  "generated": false,
+  "intro": "Mount Hallam Observatory. A blizzard buried the mountain road, and nobody can get in or out. At 10:40 pm Leonard Bray, the director of the observatory, is found dead in the dome. One of the four people left here did it.",
+  "public_facts": [
+    "This is Mount Hallam Observatory.",
+    "A blizzard buried the mountain road at about 8:00 pm. Nobody could come or go after that.",
+    "The supper ended at about 9:30 pm.",
+    "Leonard Bray, 67, the director of the observatory, went to the dome at about 9:45 pm.",
+    "Leonard Bray was found dead in the dome at 10:40 pm by Stella Bray. He had been struck on the head.",
+    "The people here that night were: Nathan Cole (a visitor), Edith Morrow (observatory administrator), Gareth Pike (instrument technician), Stella Bray (Leonard's wife)."
+  ],
+  "solution": {
+    "killer": "edith_morrow",
+    "motive": "Edith Morrow had been paying research grants to an assistant who does not exist. Leonard asked to meet the assistant and found there was no such person and was going to call the police in the morning.",
+    "method": "At about 10:05 pm Edith Morrow went to the dome and argued with Leonard, then struck him with a brass counterweight. She took the false payroll file to the furnace room and put it in the furnace.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "gain",
+      "text": "To get control of Mount Hallam Observatory"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Leonard exposing something they had done"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Leonard"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Leonard did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Grants office grant return",
+      "description": "Edith Morrow's grant return from the grants office. The last entry is timed 9:40 pm. The job is not finished.",
+      "found_in": "Grants office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Plate loan register",
+      "description": "A loan register showing forty plates signed out that evening. It puts Stella Bray in the common room from 10:00 pm to 10:22 pm.",
+      "found_in": "Plate library",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Burned payroll pages",
+      "description": "What is left of the false payroll file, found in the furnace room. Parts of it can still be read.",
+      "found_in": "Furnace room",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Edith's lab coat",
+      "description": "Edith Morrow's lab coat, left in the cold-weather store. There is clinker dust on it.",
+      "found_in": "Cold-weather store",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Fault report",
+      "description": "A report blaming the instrument technician for a cracked mirror. It is dated today and names Gareth Pike.",
+      "found_in": "Dome",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Radio company lease",
+      "description": "A draft lease from a radio company for the summit of the mountain. It names Nathan Cole.",
+      "found_in": "Nathan's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "nathan_cole": {
+      "name": "Nathan Cole",
+      "short_role": "A visitor",
+      "age": 31,
+      "role": "A visitor. Says they are a visiting student. He arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Keen, modest and full of questions.",
+      "speaking_style": "Eager and polite.",
+      "story_they_tell": [
+        "I am a visiting student. I am here to learn how the big telescope works.",
+        "After the supper I stayed with the others until about 10:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 10:40 pm, and I came out.",
+        "I barely knew Leonard Bray."
+      ],
+      "shares_freely": [
+        "At about 10:05 pm, on my way to my quarters, I passed the dome and heard two people arguing inside. One was Leonard, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Leonard say something like 'two years' and 'in the morning'.",
+        "Leonard and Stella Bray did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Leonard and Stella Bray did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a visiting student. I am a buyer for a radio company, and I want to put a transmitter mast on the summit.",
+              "Two days ago I told Leonard what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Leonard had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a buyer for a radio company and wants to put a transmitter mast on the summit.",
+        "what_really_happened": [
+          "10:05 pm: passed the dome and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a buyer for a radio company",
+          "put a transmitter mast on the summit"
+        ]
+      }
+    },
+    "edith_morrow": {
+      "name": "Edith Morrow",
+      "short_role": "Observatory administrator",
+      "age": 46,
+      "role": "Observatory administrator. She manages the grants and pays the bills.",
+      "is_killer": true,
+      "personality": "Capable, pleasant and tightly wound.",
+      "speaking_style": "Quick and precise, with a nervous laugh.",
+      "story_they_tell": [
+        "After the supper I went to the grants office. I was preparing the grant returns.",
+        "I was in the grants office from about 9:30 pm until about 10:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 10:40 pm, and found Stella Bray at the door of the dome.",
+        "I did not go near the dome tonight until the scream.",
+        "I got on well with Leonard. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Leonard told me this afternoon that he had blamed Gareth Pike, who took it badly.",
+        "Nathan Cole has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Gareth Pike.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 9:40 pm and spent the rest of the time typing letters to the trustees.",
+              "I still say I never left the grants office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the grants office the whole time. At about 10:10 pm I went to the furnace room, only to turn the heating up for the night, and I got clinker dust on my lab coat there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any false payroll file, and I still say I never went to the dome."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been paying research grants to an assistant who does not exist for two years.",
+              "Leonard asked to meet the assistant and found there was no such person this afternoon and was going to call the police in the morning.",
+              "At about 10:05 pm I went to the dome to beg for more time. We argued, and at about 10:10 pm I struck Leonard with a brass counterweight.",
+              "Then I took the false payroll file to the furnace room and put it in the furnace. That is how I got clinker dust on my lab coat."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Leonard Bray. Had been paying research grants to an assistant who does not exist.",
+        "what_really_happened": [
+          "10:05 pm: went to the dome and argued with Leonard.",
+          "10:10 pm: struck Leonard with a brass counterweight.",
+          "10:12 pm: took the false payroll file to the furnace room and put it in the furnace.",
+          "10:20 pm: left the furnace room and was seen by Gareth Pike."
+        ],
+        "giveaway_phrases": [
+          "furnace room",
+          "false payroll file",
+          "clinker dust",
+          "burned payroll pages",
+          "paying research grants to an assistant who does not exist",
+          "put it in the furnace"
+        ]
+      }
+    },
+    "gareth_pike": {
+      "name": "Gareth Pike",
+      "short_role": "Instrument technician",
+      "age": 35,
+      "role": "Instrument technician. He maintains the telescope drive and the optics.",
+      "is_killer": false,
+      "personality": "Proud, prickly and exact.",
+      "speaking_style": "Clipped and technical.",
+      "story_they_tell": [
+        "After the supper I was in the instrument workshop, realigning the drive gears. I stayed there until I heard the scream at 10:40 pm.",
+        "I saw nobody after about 9:30 pm.",
+        "Things between me and Leonard were fine, same as always."
+      ],
+      "shares_freely": [
+        "Nathan Cole has been asking the people here odd questions.",
+        "Leonard had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Nathan Cole, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Leonard blamed me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the instrument workshop the whole time. From about 10:10 pm to 10:25 pm I was out on the dome catwalk, clearing ice from the shutter.",
+              "At about 10:20 pm I saw Edith Morrow coming out of the furnace room, with clinker dust on her lab coat. She did not see me.",
+              "The furnace room is nowhere near the grants office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Leonard blamed them today, and they were out on the dome catwalk at the time of the murder.",
+        "what_really_happened": [
+          "10:10 pm to 10:25 pm: out on the dome catwalk, clearing ice from the shutter.",
+          "10:20 pm: saw Edith Morrow leave the furnace room."
+        ],
+        "giveaway_phrases": [
+          "blamed",
+          "out on the dome catwalk",
+          "clearing ice from the shutter",
+          "furnace room",
+          "clinker dust"
+        ]
+      }
+    },
+    "stella_bray": {
+      "name": "Stella Bray",
+      "short_role": "Leonard's wife",
+      "age": 60,
+      "role": "Leonard Bray's wife. She catalogues the photographic plates.",
+      "is_killer": false,
+      "personality": "Composed and sardonic.",
+      "speaking_style": "Cool, with dry asides.",
+      "story_they_tell": [
+        "After the supper I was asleep in the residence.",
+        "Later I went to look for Leonard. I found Leonard dead in the dome at 10:40 pm and I screamed.",
+        "Edith Morrow was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Leonard."
+      ],
+      "shares_freely": [
+        "Leonard had been shut in the dome every evening this week, in a foul mood.",
+        "This afternoon I heard Leonard shouting at Gareth Pike. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in the residence. From 10:00 pm to about 10:22 pm I was in the common room, packing my husband's best plates to send to a rival observatory.",
+              "I had been offered a post there and he did not know. I lied because it makes me look guilty.",
+              "At 10:40 pm I went to the dome and found Leonard dead.",
+              "When Edith Morrow reached me, she was not wearing her lab coat, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the common room, packing my husband's best plates to send to a rival observatory. I had been offered a post there and he did not know.",
+        "what_really_happened": [
+          "10:00 pm to 10:22 pm: in the common room, packing my husband's best plates to send to a rival observatory.",
+          "10:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "common room",
+          "packing my husband's best plates to send to a rival observatory",
+          "I had been offered a post there and he did not know"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

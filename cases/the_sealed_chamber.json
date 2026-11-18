@@ -1,0 +1,329 @@
+{
+  "id": "the_sealed_chamber",
+  "case_number": "012",
+  "title": "The Sealed Chamber",
+  "tagline": "Upper Egypt, April. A sandstorm has swallowed the track.",
+  "victim": "Howard Stanton",
+  "generated": false,
+  "intro": "The Tell Amar expedition camp. A sandstorm buried the track and grounded the supply truck, and nobody can get in or out. At 11:10 pm Howard Stanton, the director of the excavation, is found dead in the finds tent. One of the four people left here did it.",
+  "public_facts": [
+    "This is The Tell Amar expedition camp.",
+    "A sandstorm buried the track and grounded the supply truck at about 8:30 pm. Nobody could come or go after that.",
+    "The evening meal ended at about 10:00 pm.",
+    "Howard Stanton, 63, the director of the excavation, went to the finds tent at about 10:15 pm.",
+    "Howard Stanton was found dead in the finds tent at 11:10 pm by Constance Stanton. He had been struck on the head.",
+    "The people here that night were: Cyril Abbot (expedition treasurer), Frank Tully (site foreman), Vera Holt (a visitor), Constance Stanton (Howard's wife)."
+  ],
+  "solution": {
+    "killer": "cyril_abbot",
+    "motive": "Cyril Abbot had been drawing wages for forty workmen who do not exist. Howard counted the men on the site against the pay sheets and was going to call the police in the morning.",
+    "method": "At about 10:35 pm Cyril Abbot went to the finds tent and argued with Howard, then struck him with a mason's mallet. He took the true wage book to the cook tent and burned it in the cook tent stove.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "private",
+      "text": "A private quarrel with Howard"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Howard exposing something they had done"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of The Tell Amar expedition camp"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Howard did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Pay tent pay sheet",
+      "description": "Cyril Abbot's pay sheet from the pay tent. The last entry is timed 10:10 pm. The job is not finished.",
+      "found_in": "Pay tent",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Darkroom print log",
+      "description": "A print log showing forty drawings copied that evening. It puts Constance Stanton in the mess tent from 10:30 pm to 10:52 pm.",
+      "found_in": "Darkroom tent",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Burned wage book",
+      "description": "What is left of the true wage book, found in the cook tent. Parts of it can still be read.",
+      "found_in": "Cook tent",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Cyril's linen jacket",
+      "description": "Cyril Abbot's linen jacket, left in the wash tent. There is charcoal on it.",
+      "found_in": "Wash tent",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Letter of appointment",
+      "description": "A letter appointing a new site foreman from the start of next week. It is dated today and names Frank Tully.",
+      "found_in": "Finds tent",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Dealer's price list",
+      "description": "A price list from an antiquities dealer naming finds from this dig. It names Vera Holt.",
+      "found_in": "Vera's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "cyril_abbot": {
+      "name": "Cyril Abbot",
+      "short_role": "Expedition treasurer",
+      "age": 47,
+      "role": "Expedition treasurer. He pays the workmen and keeps the expedition's accounts.",
+      "is_killer": true,
+      "personality": "Fussy, dutiful and sour.",
+      "speaking_style": "Dry and complaining.",
+      "story_they_tell": [
+        "After the evening meal I went to the pay tent. I was making up the pay packets.",
+        "I was in the pay tent from about 10:00 pm until about 11:00 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:10 pm, and found Constance Stanton at the door of the finds tent.",
+        "I did not go near the finds tent tonight until the scream.",
+        "I got on well with Howard. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Howard told me this afternoon that he had replaced Frank Tully, who took it badly.",
+        "Vera Holt has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Frank Tully.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:10 pm and spent the rest of the time counting small coin.",
+              "I still say I never left the pay tent."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the pay tent the whole time. At about 10:40 pm I went to the cook tent, only to boil water for my flask, and I got charcoal on my linen jacket there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any true wage book, and I still say I never went to the finds tent."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been drawing wages for forty workmen who do not exist for two years.",
+              "Howard counted the men on the site against the pay sheets this afternoon and was going to call the police in the morning.",
+              "At about 10:35 pm I went to the finds tent to beg for more time. We argued, and at about 10:40 pm I struck Howard with a mason's mallet.",
+              "Then I took the true wage book to the cook tent and burned it in the cook tent stove. That is how I got charcoal on my linen jacket."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Howard Stanton. Had been drawing wages for forty workmen who do not exist.",
+        "what_really_happened": [
+          "10:35 pm: went to the finds tent and argued with Howard.",
+          "10:40 pm: struck Howard with a mason's mallet.",
+          "10:42 pm: took the true wage book to the cook tent and burned it in the cook tent stove.",
+          "10:50 pm: left the cook tent and was seen by Frank Tully."
+        ],
+        "giveaway_phrases": [
+          "cook tent",
+          "true wage book",
+          "charcoal",
+          "burned wage book",
+          "drawing wages for forty workmen who do not exist",
+          "burned it in the cook tent stove"
+        ]
+      }
+    },
+    "frank_tully": {
+      "name": "Frank Tully",
+      "short_role": "Site foreman",
+      "age": 36,
+      "role": "Site foreman. He runs the digging teams and the lifting gear.",
+      "is_killer": false,
+      "personality": "Tough, fair and stubborn.",
+      "speaking_style": "Short orders, no small talk.",
+      "story_they_tell": [
+        "After the evening meal I was in the tool store, mending the lifting tackle. I stayed there until I heard the scream at 11:10 pm.",
+        "I saw nobody after about 10:00 pm.",
+        "Things between me and Howard were fine, same as always."
+      ],
+      "shares_freely": [
+        "Vera Holt has been asking the people here odd questions.",
+        "Howard had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Vera Holt, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Howard replaced me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the tool store the whole time. From about 10:40 pm to 10:55 pm I was behind the tool store, lashing down the tarpaulins.",
+              "At about 10:50 pm I saw Cyril Abbot coming out of the cook tent, with charcoal on his linen jacket. He did not see me.",
+              "The cook tent is nowhere near the pay tent."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Howard replaced them today, and they were behind the tool store at the time of the murder.",
+        "what_really_happened": [
+          "10:40 pm to 10:55 pm: behind the tool store, lashing down the tarpaulins.",
+          "10:50 pm: saw Cyril Abbot leave the cook tent."
+        ],
+        "giveaway_phrases": [
+          "replaced",
+          "behind the tool store",
+          "lashing down the tarpaulins",
+          "cook tent",
+          "charcoal"
+        ]
+      }
+    },
+    "vera_holt": {
+      "name": "Vera Holt",
+      "short_role": "A visitor",
+      "age": 34,
+      "role": "A visitor. Says they are a travel photographer. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Glamorous, tireless and curious.",
+      "speaking_style": "Lively and flattering.",
+      "story_they_tell": [
+        "I am a travel photographer. I am here to photograph the dig for a magazine.",
+        "After the evening meal I stayed with the others until about 10:35 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:10 pm, and I came out.",
+        "I barely knew Howard Stanton."
+      ],
+      "shares_freely": [
+        "At about 10:35 pm, on my way to my quarters, I passed the finds tent and heard two people arguing inside. One was Howard, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Howard say something like 'two years' and 'in the morning'.",
+        "Howard and Constance Stanton did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Howard and Constance Stanton did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a travel photographer. I am a dealer in antiquities, and I want to buy the best finds before they are recorded.",
+              "Two days ago I told Howard what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Howard had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a dealer in antiquities and wants to buy the best finds before they are recorded.",
+        "what_really_happened": [
+          "10:35 pm: passed the finds tent and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a dealer in antiquities",
+          "buy the best finds before they are recorded"
+        ]
+      }
+    },
+    "constance_stanton": {
+      "name": "Constance Stanton",
+      "short_role": "Howard's wife",
+      "age": 58,
+      "role": "Howard Stanton's wife. She draws and photographs every find.",
+      "is_killer": false,
+      "personality": "Patient, clever and overlooked.",
+      "speaking_style": "Quiet and exact.",
+      "story_they_tell": [
+        "After the evening meal I was asleep in our tent.",
+        "Later I went to look for Howard. I found Howard dead in the finds tent at 11:10 pm and I screamed.",
+        "Cyril Abbot was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Howard."
+      ],
+      "shares_freely": [
+        "Howard had been shut in the finds tent every evening this week, in a foul mood.",
+        "This afternoon I heard Howard shouting at Frank Tully. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in our tent. From 10:30 pm to about 10:52 pm I was in the mess tent, copying my drawings to send to a rival professor.",
+              "I meant to prove that my husband had published my work as his own. I lied because it makes me look guilty.",
+              "At 11:10 pm I went to the finds tent and found Howard dead.",
+              "When Cyril Abbot reached me, he was not wearing his linen jacket, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the mess tent, copying my drawings to send to a rival professor. I meant to prove that my husband had published my work as his own.",
+        "what_really_happened": [
+          "10:30 pm to 10:52 pm: in the mess tent, copying my drawings to send to a rival professor.",
+          "11:10 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "mess tent",
+          "copying my drawings to send to a rival professor",
+          "I meant to prove that my husband had published my work as his own"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

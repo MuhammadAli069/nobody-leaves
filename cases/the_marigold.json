@@ -1,0 +1,329 @@
+{
+  "id": "the_marigold",
+  "case_number": "013",
+  "title": "The Marigold",
+  "tagline": "The Severn, August. Hard aground until the morning tide.",
+  "victim": "Josiah Crane",
+  "generated": false,
+  "intro": "The river steamer Marigold. The steamer ran onto a sandbank in the fog, and nobody can get in or out. At 11:10 pm Josiah Crane, the owner and captain of the steamer, is found dead in the wheelhouse. One of the four people left here did it.",
+  "public_facts": [
+    "This is The river steamer Marigold.",
+    "The steamer ran onto a sandbank in the fog at about 8:30 pm. Nobody could come or go after that.",
+    "The captain's dinner ended at about 10:00 pm.",
+    "Josiah Crane, 65, the owner and captain of the steamer, went to the wheelhouse at about 10:15 pm.",
+    "Josiah Crane was found dead in the wheelhouse at 11:10 pm by Clement Crane. He had been struck on the head.",
+    "The people here that night were: Ruby Dent (engine greaser), Stanley Moss (ship's clerk), Daphne Ward (a visitor), Clement Crane (Josiah's brother)."
+  ],
+  "solution": {
+    "killer": "stanley_moss",
+    "motive": "Stanley Moss had been selling tickets from a second roll and keeping the money. Josiah counted the passengers against the ticket roll and was going to call the police in the morning.",
+    "method": "At about 10:35 pm Stanley Moss went to the wheelhouse and argued with Josiah, then struck him with a brass telescope. He took the second ticket roll to the stokehold and threw it into the stokehold fire.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "gain",
+      "text": "To get control of The river steamer Marigold"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Josiah exposing something they had done"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Josiah"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Josiah did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Ticket office cash sheet",
+      "description": "Stanley Moss's cash sheet from the ticket office. The last entry is timed 10:10 pm. The job is not finished.",
+      "found_in": "Ticket office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Bar chit book",
+      "description": "A chit book with an IOU for the band's instruments, written in the saloon bar. It puts Clement Crane in the saloon bar from 10:30 pm to 10:52 pm.",
+      "found_in": "Chart locker",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Charred ticket roll",
+      "description": "What is left of the second ticket roll, found in the stokehold. Parts of it can still be read.",
+      "found_in": "Stokehold",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Stanley's waistcoat",
+      "description": "Stanley Moss's waistcoat, left in the crew washroom. There is coal dust on it.",
+      "found_in": "Crew washroom",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Log book entry",
+      "description": "A log entry calling the engine greaser careless in front of the whole crew. It is dated today and names Ruby Dent.",
+      "found_in": "Wheelhouse",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Rival company offer",
+      "description": "An offer from a rival steamer company to buy the vessel. It names Daphne Ward.",
+      "found_in": "Daphne's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "ruby_dent": {
+      "name": "Ruby Dent",
+      "short_role": "Engine greaser",
+      "age": 29,
+      "role": "Engine greaser. She oils the paddle engines and stokes when needed.",
+      "is_killer": false,
+      "personality": "Fierce, capable and tired of being overlooked.",
+      "speaking_style": "Sharp and sarcastic.",
+      "story_they_tell": [
+        "After the captain's dinner I was in the engine room, packing the paddle shaft bearings. I stayed there until I heard the scream at 11:10 pm.",
+        "I saw nobody after about 10:00 pm.",
+        "Things between me and Josiah were fine, same as always."
+      ],
+      "shares_freely": [
+        "Daphne Ward has been asking the people here odd questions.",
+        "Josiah had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Daphne Ward, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Josiah shamed me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the engine room the whole time. From about 10:40 pm to 10:55 pm I was out on the paddle box, sounding the depth with a pole.",
+              "At about 10:50 pm I saw Stanley Moss coming out of the stokehold, with coal dust on his waistcoat. He did not see me.",
+              "The stokehold is nowhere near the ticket office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Josiah shamed them today, and they were out on the paddle box at the time of the murder.",
+        "what_really_happened": [
+          "10:40 pm to 10:55 pm: out on the paddle box, sounding the depth with a pole.",
+          "10:50 pm: saw Stanley Moss leave the stokehold."
+        ],
+        "giveaway_phrases": [
+          "shamed",
+          "out on the paddle box",
+          "sounding the depth with a pole",
+          "stokehold",
+          "coal dust"
+        ]
+      }
+    },
+    "stanley_moss": {
+      "name": "Stanley Moss",
+      "short_role": "Ship's clerk",
+      "age": 46,
+      "role": "Ship's clerk. He sells the tickets and banks the bar money.",
+      "is_killer": true,
+      "personality": "Cheerful, obliging and sly.",
+      "speaking_style": "Chatty, with a wink.",
+      "story_they_tell": [
+        "After the captain's dinner I went to the ticket office. I was cashing up the day's tickets.",
+        "I was in the ticket office from about 10:00 pm until about 11:00 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:10 pm, and found Clement Crane at the door of the wheelhouse.",
+        "I did not go near the wheelhouse tonight until the scream.",
+        "I got on well with Josiah. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Josiah told me this afternoon that he had shamed Ruby Dent, who took it badly.",
+        "Daphne Ward has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Ruby Dent.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:10 pm and spent the rest of the time polishing the brass till.",
+              "I still say I never left the ticket office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the ticket office the whole time. At about 10:40 pm I went to the stokehold, only to ask the stoker about steam for the morning, and I got coal dust on my waistcoat there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any second ticket roll, and I still say I never went to the wheelhouse."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been selling tickets from a second roll and keeping the money for two years.",
+              "Josiah counted the passengers against the ticket roll this afternoon and was going to call the police in the morning.",
+              "At about 10:35 pm I went to the wheelhouse to beg for more time. We argued, and at about 10:40 pm I struck Josiah with a brass telescope.",
+              "Then I took the second ticket roll to the stokehold and threw it into the stokehold fire. That is how I got coal dust on my waistcoat."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Josiah Crane. Had been selling tickets from a second roll and keeping the money.",
+        "what_really_happened": [
+          "10:35 pm: went to the wheelhouse and argued with Josiah.",
+          "10:40 pm: struck Josiah with a brass telescope.",
+          "10:42 pm: took the second ticket roll to the stokehold and threw it into the stokehold fire.",
+          "10:50 pm: left the stokehold and was seen by Ruby Dent."
+        ],
+        "giveaway_phrases": [
+          "stokehold",
+          "second ticket roll",
+          "coal dust",
+          "charred ticket roll",
+          "selling tickets from a second roll and keeping the money",
+          "threw it into the stokehold fire"
+        ]
+      }
+    },
+    "daphne_ward": {
+      "name": "Daphne Ward",
+      "short_role": "A visitor",
+      "age": 42,
+      "role": "A visitor. Says they are a holiday tripper. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Cheerful, chatty and missing nothing.",
+      "speaking_style": "Bright and gossipy.",
+      "story_they_tell": [
+        "I am a holiday tripper. I am here for a week of river air.",
+        "After the captain's dinner I stayed with the others until about 10:35 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:10 pm, and I came out.",
+        "I barely knew Josiah Crane."
+      ],
+      "shares_freely": [
+        "At about 10:35 pm, on my way to my quarters, I passed the wheelhouse and heard two people arguing inside. One was Josiah, and he was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Josiah say something like 'two years' and 'in the morning'.",
+        "Josiah and Clement Crane did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Josiah and Clement Crane did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a holiday tripper. I am an agent for a rival steamer company, and I want to buy the Marigold and take her off this run.",
+              "Two days ago I told Josiah what I wanted, and he refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Josiah had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really an agent for a rival steamer company and wants to buy the Marigold and take her off this run.",
+        "what_really_happened": [
+          "10:35 pm: passed the wheelhouse and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "an agent for a rival steamer company",
+          "buy the Marigold and take her off this run"
+        ]
+      }
+    },
+    "clement_crane": {
+      "name": "Clement Crane",
+      "short_role": "Josiah's brother",
+      "age": 60,
+      "role": "Josiah Crane's brother. He leads the steamer's dance band.",
+      "is_killer": false,
+      "personality": "Easy charm, and an unpaid bill in every port.",
+      "speaking_style": "Lazy and musical.",
+      "story_they_tell": [
+        "After the captain's dinner I was asleep in my cabin.",
+        "Later I went to look for Josiah. I found Josiah dead in the wheelhouse at 11:10 pm and I screamed.",
+        "Stanley Moss was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Josiah."
+      ],
+      "shares_freely": [
+        "Josiah had been shut in the wheelhouse every evening this week, in a foul mood.",
+        "This afternoon I heard Josiah shouting at Ruby Dent. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in my cabin. From 10:30 pm to about 10:52 pm I was in the saloon bar, pawning the band's instruments to a passenger.",
+              "I owed money, and my brother had refused to pay it again. I lied because it makes me look guilty.",
+              "At 11:10 pm I went to the wheelhouse and found Josiah dead.",
+              "When Stanley Moss reached me, he was not wearing his waistcoat, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the saloon bar, pawning the band's instruments to a passenger. I owed money, and my brother had refused to pay it again.",
+        "what_really_happened": [
+          "10:30 pm to 10:52 pm: in the saloon bar, pawning the band's instruments to a passenger.",
+          "11:10 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "saloon bar",
+          "pawning the band's instruments to a passenger",
+          "I owed money, and my brother had refused to pay it again"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

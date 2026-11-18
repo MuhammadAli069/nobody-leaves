@@ -1,0 +1,329 @@
+{
+  "id": "the_aurora_drift",
+  "case_number": "006",
+  "title": "The Aurora Drift",
+  "tagline": "The Greenland Sea, March. Locked in the ice.",
+  "victim": "Irene Calloway",
+  "generated": false,
+  "intro": "The research ship Aurora. Pack ice closed around the ship and the radio mast came down, and nobody can get in or out. At 11:40 pm Irene Calloway, the chief scientist and leader of the expedition, is found dead in the chart room. One of the four people left here did it.",
+  "public_facts": [
+    "This is The research ship Aurora.",
+    "Pack ice closed around the ship and the radio mast came down at about 9:00 pm. Nobody could come or go after that.",
+    "The evening briefing ended at about 10:30 pm.",
+    "Irene Calloway, 56, the chief scientist and leader of the expedition, went to the chart room at about 10:45 pm.",
+    "Irene Calloway was found dead in the chart room at 11:40 pm by Owen Calloway. She had been struck on the head.",
+    "The people here that night were: Paula Reeve (a visitor), Owen Calloway (Irene's brother), Kit Maddox (deck engineer), Graham Tolland (expedition quartermaster)."
+  ],
+  "solution": {
+    "killer": "graham_tolland",
+    "motive": "Graham Tolland had been billing the institute for equipment that was never bought. Irene checked the cargo manifest against the invoices and was going to call the police in the morning.",
+    "method": "At about 11:05 pm Graham Tolland went to the chart room and argued with Irene, then struck her with a steel ice axe. He took the false invoice file to the incinerator room and burned it in the incinerator.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "revenge",
+      "text": "Revenge for something Irene did that day"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Irene"
+    },
+    {
+      "id": "gain",
+      "text": "To get control of The research ship Aurora"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Irene exposing something they had done"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Supply office audit sheet",
+      "description": "Graham Tolland's audit sheet from the supply office. The last entry is timed 10:40 pm. The job is not finished.",
+      "found_in": "Supply office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Medical stores book",
+      "description": "A stores book showing a bottle of medical brandy signed out to the mess room. It puts Owen Calloway in the mess room from 11:00 pm to 11:22 pm.",
+      "found_in": "Sick bay",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Charred invoices",
+      "description": "What is left of the false invoice file, found in the incinerator room. Parts of it can still be read.",
+      "found_in": "Incinerator room",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Graham's parka",
+      "description": "Graham Tolland's parka, left in the drying locker. There is oily ash on it.",
+      "found_in": "Drying locker",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Suspension order",
+      "description": "A signed order taking the deck engineer off duty for careless work. It is dated today and names Kit Maddox.",
+      "found_in": "Chart room",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Oil company contract",
+      "description": "A contract from an oil company paying for copies of the seabed survey. It names Paula Reeve.",
+      "found_in": "Paula's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "paula_reeve": {
+      "name": "Paula Reeve",
+      "short_role": "A visitor",
+      "age": 35,
+      "role": "A visitor. Says they are a science journalist. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Friendly, sharp and persistent.",
+      "speaking_style": "Brisk, with a reporter's questions.",
+      "story_they_tell": [
+        "I am a science journalist. I am here to write about the expedition.",
+        "After the evening briefing I stayed with the others until about 11:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 11:40 pm, and I came out.",
+        "I barely knew Irene Calloway."
+      ],
+      "shares_freely": [
+        "At about 11:05 pm, on my way to my quarters, I passed the chart room and heard two people arguing inside. One was Irene, and she was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Irene say something like 'two years' and 'in the morning'.",
+        "Irene and Owen Calloway did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Irene and Owen Calloway did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a science journalist. I am a prospector for an oil company, and I want to get the seabed survey before it is published.",
+              "Two days ago I told Irene what I wanted, and she refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Irene had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really a prospector for an oil company and wants to get the seabed survey before it is published.",
+        "what_really_happened": [
+          "11:05 pm: passed the chart room and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "a prospector for an oil company",
+          "get the seabed survey before it is published"
+        ]
+      }
+    },
+    "owen_calloway": {
+      "name": "Owen Calloway",
+      "short_role": "Irene's brother",
+      "age": 58,
+      "role": "Irene Calloway's brother. He signed on as ship's doctor to be near his sister.",
+      "is_killer": false,
+      "personality": "Kindly, tired and evasive.",
+      "speaking_style": "Gentle and roundabout.",
+      "story_they_tell": [
+        "After the evening briefing I was asleep in my cabin.",
+        "Later I went to look for Irene. I found Irene dead in the chart room at 11:40 pm and I screamed.",
+        "Graham Tolland was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Irene."
+      ],
+      "shares_freely": [
+        "Irene had been shut in the chart room every evening this week, in a foul mood.",
+        "This afternoon I heard Irene shouting at Kit Maddox. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not asleep in my cabin. From 11:00 pm to about 11:22 pm I was in the mess room, drinking the medical brandy with the cook.",
+              "I had promised my sister that I was sober. I lied because it makes me look guilty.",
+              "At 11:40 pm I went to the chart room and found Irene dead.",
+              "When Graham Tolland reached me, he was not wearing his parka, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the mess room, drinking the medical brandy with the cook. I had promised my sister that I was sober.",
+        "what_really_happened": [
+          "11:00 pm to 11:22 pm: in the mess room, drinking the medical brandy with the cook.",
+          "11:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "mess room",
+          "drinking the medical brandy with the cook",
+          "I had promised my sister that I was sober"
+        ]
+      }
+    },
+    "kit_maddox": {
+      "name": "Kit Maddox",
+      "short_role": "Deck engineer",
+      "age": 30,
+      "role": "Deck engineer. He keeps the winches and the sampling gear running.",
+      "is_killer": false,
+      "personality": "Hot-headed and loyal.",
+      "speaking_style": "Loud and direct.",
+      "story_they_tell": [
+        "After the evening briefing I was in the winch house, greasing the main winch. I stayed there until I heard the scream at 11:40 pm.",
+        "I saw nobody after about 10:30 pm.",
+        "Things between me and Irene were fine, same as always."
+      ],
+      "shares_freely": [
+        "Paula Reeve has been asking the people here odd questions.",
+        "Irene had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Paula Reeve, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Irene suspended me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the winch house the whole time. From about 11:10 pm to 11:25 pm I was out on the aft deck, chipping ice off the rail.",
+              "At about 11:20 pm I saw Graham Tolland coming out of the incinerator room, with oily ash on his parka. He did not see me.",
+              "The incinerator room is nowhere near the supply office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Irene suspended them today, and they were out on the aft deck at the time of the murder.",
+        "what_really_happened": [
+          "11:10 pm to 11:25 pm: out on the aft deck, chipping ice off the rail.",
+          "11:20 pm: saw Graham Tolland leave the incinerator room."
+        ],
+        "giveaway_phrases": [
+          "suspended",
+          "out on the aft deck",
+          "chipping ice off the rail",
+          "incinerator room",
+          "oily ash"
+        ]
+      }
+    },
+    "graham_tolland": {
+      "name": "Graham Tolland",
+      "short_role": "Expedition quartermaster",
+      "age": 50,
+      "role": "Expedition quartermaster. He controls the expedition's budget and supplies.",
+      "is_killer": true,
+      "personality": "Affable, organised and privately anxious.",
+      "speaking_style": "Easy and reassuring, with a ready laugh.",
+      "story_they_tell": [
+        "After the evening briefing I went to the supply office. I was doing the monthly supply audit.",
+        "I was in the supply office from about 10:30 pm until about 11:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 11:40 pm, and found Owen Calloway at the door of the chart room.",
+        "I did not go near the chart room tonight until the scream.",
+        "I got on well with Irene. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Irene told me this afternoon that she had suspended Kit Maddox, who took it badly.",
+        "Paula Reeve has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Kit Maddox.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 10:40 pm and spent the rest of the time counting the tinned food.",
+              "I still say I never left the supply office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the supply office the whole time. At about 11:10 pm I went to the incinerator room, only to burn the day's galley rubbish, and I got oily ash on my parka there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any false invoice file, and I still say I never went to the chart room."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been billing the institute for equipment that was never bought for two years.",
+              "Irene checked the cargo manifest against the invoices this afternoon and was going to call the police in the morning.",
+              "At about 11:05 pm I went to the chart room to beg for more time. We argued, and at about 11:10 pm I struck Irene with a steel ice axe.",
+              "Then I took the false invoice file to the incinerator room and burned it in the incinerator. That is how I got oily ash on my parka."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Irene Calloway. Had been billing the institute for equipment that was never bought.",
+        "what_really_happened": [
+          "11:05 pm: went to the chart room and argued with Irene.",
+          "11:10 pm: struck Irene with a steel ice axe.",
+          "11:12 pm: took the false invoice file to the incinerator room and burned it in the incinerator.",
+          "11:20 pm: left the incinerator room and was seen by Kit Maddox."
+        ],
+        "giveaway_phrases": [
+          "incinerator room",
+          "false invoice file",
+          "oily ash",
+          "charred invoices",
+          "billing the institute for equipment that was never bought",
+          "burned it in the incinerator"
+        ]
+      }
+    }
+  },
+  "curated": true
+}

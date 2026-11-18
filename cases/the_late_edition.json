@@ -1,0 +1,329 @@
+{
+  "id": "the_late_edition",
+  "case_number": "015",
+  "title": "The Late Edition",
+  "tagline": "Manchester, February. Snowed in on deadline night.",
+  "victim": "Winifred Shaw",
+  "generated": false,
+  "intro": "The Morning Courier building. A blizzard stopped the trams and blocked the street doors with drifts, and nobody can get in or out. At 10:40 pm Winifred Shaw, the proprietor of the newspaper, is found dead in the editor's office. One of the four people left here did it.",
+  "public_facts": [
+    "This is The Morning Courier building.",
+    "A blizzard stopped the trams and blocked the street doors with drifts at about 8:00 pm. Nobody could come or go after that.",
+    "The evening conference ended at about 9:30 pm.",
+    "Winifred Shaw, 62, the proprietor of the newspaper, went to the editor's office at about 9:45 pm.",
+    "Winifred Shaw was found dead in the editor's office at 10:40 pm by Douglas Shaw. She had been struck on the head.",
+    "The people here that night were: Alf Greaves (press foreman), Joan Pettifer (a visitor), Douglas Shaw (Winifred's husband), Bernard Quill (advertising manager)."
+  ],
+  "solution": {
+    "killer": "bernard_quill",
+    "motive": "Bernard Quill had been selling advertising space for cash and never entering it in the books. Winifred saw an advertisement in the paper that nobody had been billed for and was going to call the police in the morning.",
+    "method": "At about 10:05 pm Bernard Quill went to the editor's office and argued with Winifred, then struck her with a block of lead type. He took the private cash book to the type foundry and dropped it into the pot of molten type metal.",
+    "motive_id": "cover_up",
+    "key_evidence": [
+      "destroyed_proof",
+      "marked_clothing"
+    ]
+  },
+  "motives": [
+    {
+      "id": "gain",
+      "text": "To get control of The Morning Courier building"
+    },
+    {
+      "id": "private",
+      "text": "A private quarrel with Winifred"
+    },
+    {
+      "id": "cover_up",
+      "text": "To stop Winifred exposing something they had done"
+    },
+    {
+      "id": "revenge",
+      "text": "Revenge for something Winifred did that day"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "alibi_record",
+      "name": "Advertising office page plan",
+      "description": "Bernard Quill's page plan from the advertising office. The last entry is timed 9:40 pm. The job is not finished.",
+      "found_in": "Advertising office",
+      "locked": false
+    },
+    {
+      "id": "finder_record",
+      "name": "Dispatch slip",
+      "description": "A dispatch slip for an article sent to a rival newspaper that evening. It puts Douglas Shaw in the reporters' room from 10:00 pm to 10:22 pm.",
+      "found_in": "Wire room",
+      "locked": false
+    },
+    {
+      "id": "destroyed_proof",
+      "name": "Scorched book cover",
+      "description": "What is left of the private cash book, found in the type foundry. Parts of it can still be read.",
+      "found_in": "Type foundry",
+      "locked": true
+    },
+    {
+      "id": "marked_clothing",
+      "name": "Bernard's tie",
+      "description": "Bernard Quill's tie, left in the washroom. There is lead dust on it.",
+      "found_in": "Washroom",
+      "locked": true
+    },
+    {
+      "id": "witness_paper",
+      "name": "Staff memo",
+      "description": "A memo to all staff calling the press foreman too old for the job. It is dated today and names Alf Greaves.",
+      "found_in": "Editor's office",
+      "locked": false
+    },
+    {
+      "id": "outsider_paper",
+      "name": "Press owner's letter",
+      "description": "A letter from a London newspaper owner giving authority to buy the Courier. It names Joan Pettifer.",
+      "found_in": "Joan's quarters",
+      "locked": false
+    }
+  ],
+  "suspects": {
+    "alf_greaves": {
+      "name": "Alf Greaves",
+      "short_role": "Press foreman",
+      "age": 44,
+      "role": "Press foreman. He runs the printing presses in the basement.",
+      "is_killer": false,
+      "personality": "A proud craftsman with a long memory for insults.",
+      "speaking_style": "Slow, heavy and deliberate.",
+      "story_they_tell": [
+        "After the evening conference I was in the press room, setting up the press for the late run. I stayed there until I heard the scream at 10:40 pm.",
+        "I saw nobody after about 9:30 pm.",
+        "Things between me and Winifred were fine, same as always."
+      ],
+      "shares_freely": [
+        "Joan Pettifer has been asking the people here odd questions.",
+        "Winifred had been in a bad temper all week."
+      ],
+      "under_pressure": "Get irritated and defensive. Repeat your account. Say the detective should look at Joan Pettifer, who has been asking a lot of questions.",
+      "pressure": {
+        "evidence": {
+          "witness_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Cornered",
+            "confesses": false,
+            "unlocks": [
+              "destroyed_proof",
+              "marked_clothing"
+            ],
+            "admits": [
+              "Winifred insulted me this afternoon. I hid it because it makes me look guilty.",
+              "I was not in the press room the whole time. From about 10:10 pm to 10:25 pm I was out in the delivery yard, shovelling snow from the van doors.",
+              "At about 10:20 pm I saw Bernard Quill coming out of the type foundry, with lead dust on his tie. He did not see me.",
+              "The type foundry is nowhere near the advertising office."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Winifred insulted them today, and they were out in the delivery yard at the time of the murder.",
+        "what_really_happened": [
+          "10:10 pm to 10:25 pm: out in the delivery yard, shovelling snow from the van doors.",
+          "10:20 pm: saw Bernard Quill leave the type foundry."
+        ],
+        "giveaway_phrases": [
+          "insulted",
+          "out in the delivery yard",
+          "shovelling snow from the van doors",
+          "type foundry",
+          "lead dust"
+        ]
+      }
+    },
+    "joan_pettifer": {
+      "name": "Joan Pettifer",
+      "short_role": "A visitor",
+      "age": 30,
+      "role": "A visitor. Says they are a job applicant. She arrived a few days ago.",
+      "is_killer": false,
+      "personality": "Composed, ambitious and very polite.",
+      "speaking_style": "Clear and careful.",
+      "story_they_tell": [
+        "I am a job applicant. I am here for an interview that the snow has delayed.",
+        "After the evening conference I stayed with the others until about 10:05 pm, then I went to my own quarters.",
+        "I was in my quarters when I heard the scream at 10:40 pm, and I came out.",
+        "I barely knew Winifred Shaw."
+      ],
+      "shares_freely": [
+        "At about 10:05 pm, on my way to my quarters, I passed the editor's office and heard two people arguing inside. One was Winifred, and she was the loud one. The other voice was low and controlled. I could not tell who it was.",
+        "I heard Winifred say something like 'two years' and 'in the morning'.",
+        "Winifred and Douglas Shaw did not seem to get on."
+      ],
+      "under_pressure": "Stay charming and a little amused. Repeat your account. Remark that Winifred and Douglas Shaw did not seem to get on.",
+      "pressure": {
+        "evidence": {
+          "outsider_paper": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Exposed",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I am not a job applicant. I am an agent for a London newspaper owner, and I want to buy the Courier and merge it with a London paper.",
+              "Two days ago I told Winifred what I wanted, and she refused angrily and told me to leave. I stayed on anyway.",
+              "From what I have seen this week, something is badly wrong with how this place is run, and I think Winifred had just found out."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Is really an agent for a London newspaper owner and wants to buy the Courier and merge it with a London paper.",
+        "what_really_happened": [
+          "10:05 pm: passed the editor's office and heard the argument, then went to their quarters."
+        ],
+        "giveaway_phrases": [
+          "an agent for a London newspaper owner",
+          "buy the Courier and merge it with a London paper"
+        ]
+      }
+    },
+    "douglas_shaw": {
+      "name": "Douglas Shaw",
+      "short_role": "Winifred's husband",
+      "age": 64,
+      "role": "Winifred Shaw's husband. He writes the paper's leading articles.",
+      "is_killer": false,
+      "personality": "Clever, bitter and fond of a drink.",
+      "speaking_style": "Polished and sarcastic.",
+      "story_they_tell": [
+        "After the evening conference I was dozing in the reference library.",
+        "Later I went to look for Winifred. I found Winifred dead in the editor's office at 10:40 pm and I screamed.",
+        "Bernard Quill was the first to reach me, within a minute.",
+        "Everything was perfectly fine between me and Winifred."
+      ],
+      "shares_freely": [
+        "Winifred had been shut in the editor's office every evening this week, in a foul mood.",
+        "This afternoon I heard Winifred shouting at Alf Greaves. I do not know what it was about."
+      ],
+      "under_pressure": "Go cold and formal. Repeat your account. Say you cannot believe anyone here would do this.",
+      "pressure": {
+        "evidence": {
+          "finder_record": 2
+        },
+        "stages": [
+          {
+            "at": 2,
+            "label": "Shaken",
+            "confesses": false,
+            "unlocks": [
+              "marked_clothing"
+            ],
+            "admits": [
+              "I was not dozing in the reference library. From 10:00 pm to about 10:22 pm I was in the reporters' room, writing an article for a rival paper under a false name.",
+              "I was being paid to attack my own wife's newspaper. I lied because it makes me look guilty.",
+              "At 10:40 pm I went to the editor's office and found Winifred dead.",
+              "When Bernard Quill reached me, he was not wearing his tie, which is unusual."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Was in the reporters' room, writing an article for a rival paper under a false name. I was being paid to attack my own wife's newspaper.",
+        "what_really_happened": [
+          "10:00 pm to 10:22 pm: in the reporters' room, writing an article for a rival paper under a false name.",
+          "10:40 pm: found the body."
+        ],
+        "giveaway_phrases": [
+          "reporters' room",
+          "writing an article for a rival paper under a false name",
+          "I was being paid to attack my own wife's newspaper"
+        ]
+      }
+    },
+    "bernard_quill": {
+      "name": "Bernard Quill",
+      "short_role": "Advertising manager",
+      "age": 50,
+      "role": "Advertising manager. He sells the advertising space and collects the money.",
+      "is_killer": true,
+      "personality": "Hearty, generous and always short of cash.",
+      "speaking_style": "Booming and jocular.",
+      "story_they_tell": [
+        "After the evening conference I went to the advertising office. I was making up next week's advertising pages.",
+        "I was in the advertising office from about 9:30 pm until about 10:30 pm. I was alone and saw nobody.",
+        "I came when I heard the scream at 10:40 pm, and found Douglas Shaw at the door of the editor's office.",
+        "I did not go near the editor's office tonight until the scream.",
+        "I got on well with Winifred. Nothing was wrong between us."
+      ],
+      "shares_freely": [
+        "Winifred told me this afternoon that she had insulted Alf Greaves, who took it badly.",
+        "Joan Pettifer has asked a lot of questions about this place."
+      ],
+      "under_pressure": "Stay calm and polite. Repeat your account. Suggest, as if reluctantly, that the detective should look at Alf Greaves.",
+      "pressure": {
+        "evidence": {
+          "alibi_record": 1,
+          "marked_clothing": 2,
+          "destroyed_proof": 2
+        },
+        "stages": [
+          {
+            "at": 1,
+            "label": "Guarded",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "The job was not finished. I stopped at about 9:40 pm and spent the rest of the time measuring column inches.",
+              "I still say I never left the advertising office."
+            ]
+          },
+          {
+            "at": 3,
+            "label": "Rattled",
+            "confesses": false,
+            "unlocks": [],
+            "admits": [
+              "I was not in the advertising office the whole time. At about 10:10 pm I went to the type foundry, only to ask when the plates would be ready, and I got lead dust on my tie there.",
+              "I did not mention it before because it did not seem important.",
+              "I know nothing about any private cash book, and I still say I never went to the editor's office."
+            ]
+          },
+          {
+            "at": 5,
+            "label": "Broken",
+            "confesses": true,
+            "unlocks": [],
+            "admits": [
+              "I have been selling advertising space for cash and never entering it in the books for two years.",
+              "Winifred saw an advertisement in the paper that nobody had been billed for this afternoon and was going to call the police in the morning.",
+              "At about 10:05 pm I went to the editor's office to beg for more time. We argued, and at about 10:10 pm I struck Winifred with a block of lead type.",
+              "Then I took the private cash book to the type foundry and dropped it into the pot of molten type metal. That is how I got lead dust on my tie."
+            ]
+          }
+        ]
+      },
+      "hidden_truth": {
+        "secret": "Killed Winifred Shaw. Had been selling advertising space for cash and never entering it in the books.",
+        "what_really_happened": [
+          "10:05 pm: went to the editor's office and argued with Winifred.",
+          "10:10 pm: struck Winifred with a block of lead type.",
+          "10:12 pm: took the private cash book to the type foundry and dropped it into the pot of molten type metal.",
+          "10:20 pm: left the type foundry and was seen by Alf Greaves."
+        ],
+        "giveaway_phrases": [
+          "type foundry",
+          "private cash book",
+          "lead dust",
+          "scorched book cover",
+          "selling advertising space for cash and never entering it in the books",
+          "dropped it into the pot of molten type metal"
+        ]
+      }
+    }
+  },
+  "curated": true
+}
