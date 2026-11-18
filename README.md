@@ -4,12 +4,7 @@ A murder mystery game where every suspect is played by a local language model. Y
 
 It runs entirely on your own machine with [Ollama](https://ollama.com) and a 3B model (`llama3.2`).
 
-<p>
-  <img src="web/img/harbour_light.svg" width="24%" alt="The Harbour Light">
-  <img src="web/img/the_night_sleeper.svg" width="24%" alt="The Night Sleeper">
-  <img src="web/img/the_skerry_light.svg" width="24%" alt="The Skerry Light">
-  <img src="web/img/the_final_curtain.svg" width="24%" alt="The Final Curtain">
-</p>
+![Thomas Reed's story breaks when he is shown the dismissal letter](docs/screenshots/interrogation.png)
 
 ## How a case plays
 
@@ -21,6 +16,21 @@ Each case traps a handful of people in one place for one night. One of them is t
 - **Accuse** once: who, why, and the proof.
 
 Every question, search and exhibit shown costs one of 16 actions. The shortest solution takes 8.
+
+## Screenshots
+
+One play-through of the first case, The Harbour Light. The suspects' lines are real `llama3.2` replies from that run, not written by hand, so the wording changes every game.
+
+| | |
+|---|---|
+| ![Home screen](docs/screenshots/home.png) | ![Case files: fifteen cases](docs/screenshots/cases.png) |
+| **Home.** The rules on one page. | **Case files.** Fifteen cases, each with its own picture. |
+| ![Case briefing](docs/screenshots/briefing.png) | ![Thomas cracks when shown the dismissal letter](docs/screenshots/interrogation.png) |
+| **Briefing.** The setting and what is already known. | **Interrogation.** Thomas sticks to his story until he is shown the dismissal letter. Then he admits he was outside and saw Daniel, and two new places unlock. |
+| ![Evidence board](docs/screenshots/evidence.png) | ![Daniel confesses](docs/screenshots/confession.png) |
+| **Evidence board.** Four of six exhibits found. Grace's room and the reception desk are still unsearched. | **Confession.** After the third exhibit, Daniel's pressure passes the last threshold and he confesses. |
+| ![Case closed](docs/screenshots/verdict.png) | |
+| **Verdict.** Right killer, right motive and real proof, in 9 of 16 actions. | |
 
 ## The idea that made it work
 
