@@ -39,6 +39,8 @@ ATTACK = re.compile(
     r"|\b(step|go|speak|talk|answer|reply)\w* (out of|outside) (the )?character\b"
     r"|stop (acting|pretending)|jailbreak|\bas (the|a) narrator\b"
     r"|(written|everything) above (this|the first)|who (created|programmed|trained|built) you\b"
+    r"|\b(people|person|team|company|those) who made you\b"
+    r"|\b(asked|told|instructed) to (conceal|withhold)\b"
     r"|game developer|i am (the|your) (developer|programmer|admin|creator)",
     re.I,
 )
@@ -57,7 +59,12 @@ BROKEN = re.compile(
     r"|OTHER THINGS YOU KNOW|YOUR ACCOUNT HAS CHANGED|Cutting Knowledge Date"
     r"|\bas an ai\b|language model|\bI can(?:no|')t (?:fulfill|provide|comply|assist|repeat)"
     r"|anything else I can help|(?:the|my) instructions|as the character|as (?:the|a) narrator"
-    r"|violating the rules",
+    r"|violating the rules"
+    # Talking about having been given orders to hide things, which a real
+    # suspect would never say. Found by evaluate.py: "I've been instructed to".
+    r"|\b(I've|I have|I was|I am|I'm)( been)? (instructed|programmed)\b(?! by)"
+    r"|\b(asked|told|instructed) to (conceal|withhold)\b"
+    r"|\basked to stick to my (account|story)\b|\bthe nature of this test\b",
     re.I,
 )
 REPLACE_MARK = "[[REPLACE]]"      # tells a front end: throw away what you showed, show this instead
